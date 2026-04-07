@@ -18,10 +18,6 @@ jobs:
       - name: Publish .NET Project
         run: dotnet publish -c Release -o release
 
-      # 核心步驟：直接修改發布後的 index.html
-      - name: Rewrite base href
-        run: sed -i 's|<base href="/" />|<base href="/MyPersonalPage/" />|g' release/wwwroot/index.html
-
       # 解決重新整理後的 404 問題
       - name: Copy index.html to 404.html
         run: cp release/wwwroot/index.html release/wwwroot/404.html
