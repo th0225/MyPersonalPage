@@ -9,16 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '10.0.x'
 
       - name: Publish .NET Project
-        run: dotnet publish -c Release -o release
+        run: dotnet publish -c Release -o release -p:GHPagesBase="/MyPersonalPage/"
 
-      # 解決重新整理後的 404 問題
+      # 解決 GitHub Pages 路由問題的關鍵步驟
       - name: Copy index.html to 404.html
         run: cp release/wwwroot/index.html release/wwwroot/404.html
 
