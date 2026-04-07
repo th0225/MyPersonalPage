@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "sWO55sKr",
+  "version": "3l5s65B8",
   "assets": [
     {
       "hash": "sha256-kBmVfU2BqUZUT8HPz7NUnkObDjxYKbSWXF5q33paHM0=",
@@ -82,8 +82,8 @@ self.assetsManifest = {
       "url": "MyPersonalPage/_framework/MudBlazor.3k213rnhs9.wasm"
     },
     {
-      "hash": "sha256-1zM/KOlcW1mY/KE/2WWDO2aC/iaWBdszzX0tLk/xOYE=",
-      "url": "MyPersonalPage/_framework/MyPersonalPage.1ujjxs7zjf.wasm"
+      "hash": "sha256-ellkCqAIl66xk8Gr613Fo1j88gIqKsix7yf8wC24hbA=",
+      "url": "MyPersonalPage/_framework/MyPersonalPage.ipf8tacdav.wasm"
     },
     {
       "hash": "sha256-aUlPAIM6dIkQuXbRlolcUD+L2S1yHN7SJLa1Q0ibvZE=",
@@ -170,8 +170,8 @@ self.assetsManifest = {
       "url": "MyPersonalPage/_framework/blazor.webassembly.66stpp682q.js"
     },
     {
-      "hash": "sha256-ht47xCWfeqAoOJyWoU3UqMcGmF35FN/JV0gpjrsJ6SY=",
-      "url": "MyPersonalPage/_framework/dotnet.aj1rmedc9e.js"
+      "hash": "sha256-57iAq3ZJXJoenK7wfymV2rSd7vZAnIqbS82h7pLBvh0=",
+      "url": "MyPersonalPage/_framework/dotnet.b37s25fpuw.js"
     },
     {
       "hash": "sha256-Ebk+Km0uqtdo/srKe0YcuUOlFykCcKVkBt03gTWt0aU=",
@@ -210,7 +210,7 @@ self.assetsManifest = {
       "url": "MyPersonalPage/icon-512.png"
     },
     {
-      "hash": "sha256-PnyXvLHZHuZHNLvzORAwG+bBpZhDxiv08X1Q+6toZRc=",
+      "hash": "sha256-I0IlS+6q/Lw1kIQy+wBTWtAKaZCP2HIbB5UOwGjepQI=",
       "url": "MyPersonalPage/index.html"
     },
     {
