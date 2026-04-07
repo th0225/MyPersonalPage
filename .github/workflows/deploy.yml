@@ -9,15 +9,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '10.0.x'
 
       - name: Publish .NET Project
-        run: dotnet publish -c Release -o release -p:GHPagesBase="/MyPersonalPage/"
+        run: dotnet publish -c Release -o release
 
-      # 解決 GitHub Pages 路由問題的關鍵步驟
+      # 核心步驟：直接修改發布後的 index.html
+      - name: Rewrite base href
+        run: sed -i 's|<base href="/" />|<base href="/MyPersonalPage/" />|g' release/wwwroot/index.html
+
+      # 解決重新整理後的 404 問題
       - name: Copy index.html to 404.html
         run: cp release/wwwroot/index.html release/wwwroot/404.html
 
