@@ -16,7 +16,7 @@
                 <MudFab Color="Color.Surface" 
                         StartIcon="@Icons.Custom.Brands.GitHub" 
                         Label="GitHub"
-                        Href="https://github.com/你的帳號" 
+                        Href="https://github.com/th0225" 
                         Target="_blank"
                         Style="background-color: #FAF9F6; color: #5C4B3A;
                             text-transform: none; border-radius: 12px;" />
@@ -27,7 +27,7 @@
                 <MudFab Color="Color.Surface" 
                         StartIcon="@Icons.Custom.Brands.Instagram" 
                         Label="Instagram"
-                        Href="https://www.instagram.com/你的帳號" 
+                        Href="https://www.instagram.com/chicken__five" 
                         Target="_blank"
                         Style="background-color: #FAF9F6; color: #5C4B3A;
                             text-transform: none; border-radius: 12px;" />
@@ -49,7 +49,7 @@
                 <MudFab Color="Color.Surface" 
                         StartIcon="@Icons.Material.Filled.DirectionsBike" 
                         Label="Strava"
-                        Href="https://www.strava.com/athletes/你的ID" 
+                        Href="https://www.strava.com/athletes/25929657" 
                         Target="_blank"
                         Style="background-color: #FAF9F6; color: #5C4B3A;
                             text-transform: none; border-radius: 12px;" />
@@ -60,7 +60,7 @@
                 <MudFab Color="Color.Surface" 
                         StartIcon="@Icons.Material.Filled.AlternateEmail" 
                         Label="Threads"
-                        Href="https://www.threads.net/" 
+                        Href="@_threadsUrl" 
                         Target="_blank"
                         Style="background-color: #FAF9F6; color: #5C4B3A;
                             text-transform: none; border-radius: 12px;" />
@@ -78,3 +78,8 @@
         </div>
     </MudPaper>
 </div>
+
+@code {
+    private string _threadsUrl =
+        "https://www.threads.com/@chicken__five";
+}
