@@ -1,0 +1,36 @@
+name: Strava Stats Sync
+
+on:
+  schedule:
+    - cron: '0 20 * * *' # 每天台灣時間凌晨 4 點執行
+  workflow_dispatch:      # 允許你在 GitHub 介面上手動點擊執行測試
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Requests
+        run: pip install requests
+
+      - name: Run Update Script
+        env:
+          STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+        run: python update_strava.py
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "StravaBot"
+          git config --global user.email "bot@github.com"
+          git add wwwroot/data/strava.json
+          git commit -m "Update cycling stats from Strava [skip ci]" || exit 0
+          git push

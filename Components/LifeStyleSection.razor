@@ -1,3 +1,5 @@
+@inject HttpClient Http
+
 <div id="lifestyle" class="py-12 section-container"
     style="background-color: #FAF9F6; margin: 0 -16px; padding: 32px;">
     @* 標題區 *@
@@ -11,72 +13,122 @@
     </div>
 
     <MudGrid Spacing="4">
-        @* --- 左側：單車數據看板 --- *@
+        @* --- 單車數據看板 --- *@
         <MudItem xs="12" md="8">
-            <MudPaper Elevation="0" Class="pa-6" Style="background: #FFFFFF; border-radius: 28px; border: 1px solid #F0EBE3;">
-                <div class="d-flex justify-space-between align-center mb-6">
-                    <div class="d-flex align-center">
-                        <MudAvatar Color="Color.Primary" Variant="Variant.Filled" Class="mr-3" Style="width:48px; height:48px;">
-                            <MudIcon Icon="@Icons.Material.Filled.DirectionsBike" />
-                        </MudAvatar>
-                        <div>
-                            <MudText Typo="Typo.h6" Style="font-weight: 700; color: #5C4B3A;">Cycling Stats</MudText>
-                            <MudText Typo="Typo.caption" Style="color: #A68966;">最近一次活動：大肚山繞圈</MudText>
-                        </div>
-                    </div>
-                    @* 這裡預留一個 Strava 連結圖示 *@
-                    <MudIconButton Icon="@Icons.Material.Filled.OpenInNew" Color="Color.Inherit" Size="Size.Small" />
+            <MudPaper Elevation="0" Class="pa-6"
+                Style="background: #FFF9F3; border-radius: 24px;
+                    border: 1px solid #EBE3D5;">
+                <div class="d-flex align-center mb-4">
+                    <MudIcon Icon="@Icons.Material.Rounded.DirectionsBike"
+                        Style="color: #A68966;" Class="mr-2" />
+                    <MudText Typo="Typo.h6" Style="color: #5C4B3A;
+                        font-weight: 800;">
+                        最新騎乘訓練
+                    </MudText>
+                    <MudSpacer />
+                    @if (_latestActivity != null)
+                    {
+                        <MudChip T="string" Size="Size.Small"
+                            Variant="Variant.Text" Style="color: #A68966;
+                                background: #EBE3D5;">
+                            @_latestActivity.Name
+                        </MudChip>
+                    }
                 </div>
 
-                <MudGrid>
-                    <MudItem xs="4">
-                        <div class="stat-item">
+                @if (_latestActivity == null)
+                {
+                    <MudProgressLinear Color="Color.Default"
+                        Indeterminate="true" Class="my-7" />
+                }
+                else
+                {
+                    <MudGrid Spacing="2">
+                        <MudItem xs="6" sm="3">
+                            <div class="stat-card">
+                                <MudText Typo="Typo.caption"
+                                    Style="color: #7A6F62;">
+                                    距離
+                                </MudText>
+                                <MudText Typo="Typo.h5"
+                                    Style="font-weight: 900; color: #5C4B3A;">
+                                    @_latestActivity.Distance
+                                    <span style="font-size: 14px;
+                                        margin-left: 2px;">
+                                        km
+                                    </span>
+                                </MudText>
+                            </div>
+                        </MudItem>
+
+                        <MudItem xs="6" sm="3">
+                            <div class="stat-card">
+                                <MudText Typo="Typo.caption"
+                                    Style="color: #7A6F62;">
+                                    爬升
+                                </MudText>
+                                <MudText Typo="Typo.h5"
+                                    Style="font-weight: 900; color: #5C4B3A;">
+                                    @_latestActivity.Elevation
+                                    <span style="font-size: 14px;
+                                        margin-left: 2px;">
+                                        m
+                                    </span>
+                                </MudText>
+                            </div>
+                        </MudItem>
+
+                        <MudItem xs="6" sm="3">
+                            <div class="stat-card">
+                                <MudText Typo="Typo.caption"
+                                    Style="color: #7A6F62;">
+                                    平均功率
+                                </MudText>
+                                <MudText Typo="Typo.h5"
+                                    Style="font-weight: 900; color: #5C4B3A;">
+                                    @_latestActivity.AverageWatts
+                                    <span style="font-size: 14px;
+                                        margin-left: 2px;">
+                                        W
+                                    </span>
+                                </MudText>
+                            </div>
+                        </MudItem>
+
+                        <MudItem xs="6" sm="3">
+                            <div class="stat-card">
+                                <MudText Typo="Typo.caption"
+                                    Style="color: #7A6F62;">
+                                    耗時
+                                </MudText>
+                                <MudText Typo="Typo.h6"
+                                    Style="font-weight: 900; color: #5C4B3A;
+                                        margin-top: 4px;">
+                                    @_latestActivity.DisplayTime
+                                </MudText>
+                            </div>
+                        </MudItem>
+                    </MudGrid>
+
+                    <div class="d-flex align-center mt-4 pt-4"
+                        style="border-top: 1px dashed #EBE3D5;">
+                        <MudIcon Icon="@Icons.Material.Rounded.Bolt"
+                            Size="Size.Small" Style="color: #FACC15;" />
+                        <MudText Typo="Typo.caption" Class="ml-1"
+                            Style="color: #7A6F62;">
+                            最高功率: @_latestActivity.MaxWatts W | FTP: 215W
+                        </MudText>
+                        <MudSpacer />
+                        <MudLink 
+                            href="https://www.strava.com/athletes/25929657"
+                            Target="_blank" Underline="Underline.None">
                             <MudText Typo="Typo.caption"
-                                Style="color: #A68966;">
-                                Distance
+                                Style="color: #A68966; font-weight: 700;">
+                                VIEW ON STRAVA
                             </MudText>
-                            <MudText Typo="Typo.h5"
-                                Style="font-weight: 800; color: #5C4B3A;">
-                                42.5
-                                <span class="stat-unit">km</span>
-                            </MudText>
-                        </div>
-                    </MudItem>
-                    <MudItem xs="4">
-                        <div class="stat-item">
-                            <MudText Typo="Typo.caption"
-                                Style="color: #A68966;">
-                                Elevation
-                            </MudText>
-                            <MudText Typo="Typo.h5"
-                                Style="font-weight: 800; color: #5C4B3A;">
-                                615
-                                <span class="stat-unit">m</span>
-                            </MudText>
-                        </div>
-                    </MudItem>
-                    <MudItem xs="4">
-                        <div class="stat-item">
-                            <MudText Typo="Typo.caption"
-                                Style="color: #A68966;">
-                                FTP
-                            </MudText>
-                            <MudText Typo="Typo.h5"
-                                Style="font-weight: 800; color: #5C4B3A;">
-                                210
-                                <span class="stat-unit">W</span>
-                            </MudText>
-                        </div>
-                    </MudItem>
-                    
-                    <MudItem xs="12" Class="mt-4">
-                        <div class="d-flex justify-space-between mb-2">
-                            <MudText Typo="Typo.caption" Style="color: #7A6F62;">本週目標里程 (150km)</MudText>
-                            <MudText Typo="Typo.caption" Style="font-weight: 700;">85%</MudText>
-                        </div>
-                        <MudProgressLinear Color="Color.Primary" Value="85" Size="Size.Large" Style="border-radius: 10px; background: #F5F2ED;" />
-                    </MudItem>
-                </MudGrid>
+                        </MudLink>
+                    </div>
+                }
             </MudPaper>
         </MudItem>
 
@@ -91,7 +143,7 @@
                         <div>
                             <MudText Typo="Typo.body1"
                                 Style="font-weight: 700; color: #5C4B3A;">
-                                    今日配方
+                                    今日咖啡配方
                             </MudText>
                             <MudText Typo="Typo.body2"
                                 Style="color: #7A6F62;">
@@ -161,10 +213,16 @@
     {
         await base.OnInitializedAsync();
 
-        _latestActivity.Name = "Morning Ride";
-        _latestActivity.Distance = 88.91;
-        _latestActivity.MovingTime = 204;
-        _latestActivity.TotalElevationGain = 235;
+        try
+        {
+            _latestActivity = await Http.GetFromJsonAsync<StravaActivity>(
+                "data/strava.json"
+            );
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"資料讀取失敗: {ex.Message}");
+        }
     }
 
     private void InteractWithCat()
