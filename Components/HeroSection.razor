@@ -1,0 +1,34 @@
+<div id="home" class="mb-10">
+    <MudPaper Elevation="0"
+        Class="relative overflow-hidden section-container"
+        Style="height: 380px; background-color: #FFFFFF">
+        <MudImage Src="images/img_1.JPG" Alt="My Life"
+            ObjectFit="ObjectFit.Cover" Class="w-100 h-100" />
+        <div class="hero-text-overlay">
+            <MudText Typo="Typo.h5" Style="font-weight: 800;
+                color: #5C4B3A; letter-spacing: 1px;">
+                Hello, I'm Chi
+            </MudText>
+            <MudText Typo="Typo.subtitle2" Style="color: #7A6F62;
+                line-height: 1.6;">
+                軟體工程師 / 單車愛好者 / 貓奴<br/>在這裡分享我的紀錄與主子日常。
+            </MudText>
+        </div>
+    </MudPaper>
+</div>
+
+<style>
+    /* 核心佈局優化 */
+    .w-100 { width: 100% !important; }
+    .h-100 { height: 100% !important; }
+
+    .hero-text-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 20px 30px 20px;
+        background: linear-gradient(transparent, rgba(250, 249, 246, 0.98));
+    }
+
+</style>

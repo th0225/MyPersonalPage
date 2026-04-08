@@ -1,0 +1,87 @@
+<MudGrid Spacing="4" id="lifestyle" >
+    @* --- 左側：單車大卡片 (佔據較大視覺比重) --- *@
+    <MudItem xs="12" md="7">
+        <MudCard Elevation="0" Class="lifestyle-card"
+            Style="background: #FFFFFF; border-radius: 24px; height: 100%;">
+            <MudCardContent>
+                <div class="d-flex justify-space-between align-center mb-2">
+                    <MudText Typo="Typo.h6" Style="font-weight: 700;
+                        color: #5C4B3A;">
+                        單車訓練
+                    </MudText>
+                    <MudChip T="string" Size="Size.Small"
+                        Variant="Variant.Text"
+                        Style="background: #F5F2ED; color: #A68966;">
+                        Active
+                    </MudChip>
+                </div>
+                <MudText Typo="Typo.body2" Style="color: #7A6F62;"
+                    Class="mb-4">
+                    習慣在坡道間找尋節奏，享受心率與瓦數交織的時刻。
+                </MudText>
+                <div class="d-flex gap-4">
+                    <div class="data-box">
+                        <MudText Typo="Typo.caption"
+                            Style="color: #A68966;">
+                            FTP
+                        </MudText>
+                        <MudText Typo="Typo.h6" Style="font-weight: 800;
+                            color: #5C4B3A;">
+                            210
+                            <span style="font-size: 12px; margin-left: 2px;">
+                                W
+                            </span>
+                        </MudText>
+                    </div>
+                    <div class="data-box">
+                        <MudText Typo="Typo.caption" 
+                            Style="color: #A68966;">
+                            Weekly
+                        </MudText>
+                        <MudText Typo="Typo.h6" Style="font-weight: 800;
+                            color: #5C4B3A;">200
+                            <span style="font-size: 12px; margin-left: 2px;">
+                                km
+                            </span>
+                        </MudText>
+                    </div>
+                </div>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+
+    @* --- 右側：咖啡與貓咪 (垂直排列) --- *@
+    <MudItem xs="12" md="5">
+        <MudStack Spacing="4">
+            @* 咖啡卡片 *@
+            <MudCard Elevation="0" Class="lifestyle-card" Style="background: #F5F2ED; border-radius: 20px;">
+                <MudCardHeader>
+                    <CardHeaderAvatar>
+                        <MudAvatar Style="background-color: #FFFFFF;">
+                            <MudIcon Icon="@Icons.Material.Filled.LocalCafe" Size="Size.Small" Style="color: #A68966;" />
+                        </MudAvatar>
+                    </CardHeaderAvatar>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.body1" Style="font-weight: 700; color: #5C4B3A;">Hand Drip</MudText>
+                        <MudText Typo="Typo.caption" Style="color: #7A6F62;">衣索比亞 · 日曬 · 93°C</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+            </MudCard>
+
+            @* 貓咪卡片 *@
+            <MudCard Elevation="0" Class="lifestyle-card" Style="background: #EBE3D5; border-radius: 20px;">
+                <MudCardHeader>
+                    <CardHeaderAvatar>
+                        <MudAvatar Style="background-color: #FFFFFF;">
+                            <MudIcon Icon="@Icons.Material.Filled.Pets" Size="Size.Small" Style="color: #A68966;" />
+                        </MudAvatar>
+                    </CardHeaderAvatar>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.body1" Style="font-weight: 700; color: #5C4B3A;">My Cat</MudText>
+                        <MudText Typo="Typo.caption" Style="color: #7A6F62;">目前狀態：肚子餓了正在抗議</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+            </MudCard>
+        </MudStack>
+    </MudItem>
+</MudGrid>
