@@ -1,87 +1,202 @@
-<MudGrid Spacing="4" id="lifestyle" >
-    @* --- 左側：單車大卡片 (佔據較大視覺比重) --- *@
-    <MudItem xs="12" md="7">
-        <MudCard Elevation="0" Class="lifestyle-card"
-            Style="background: #FFFFFF; border-radius: 24px; height: 100%;">
-            <MudCardContent>
-                <div class="d-flex justify-space-between align-center mb-2">
-                    <MudText Typo="Typo.h6" Style="font-weight: 700;
-                        color: #5C4B3A;">
-                        單車訓練
+<div id="lifestyle" class="py-12 section-container"
+    style="background-color: #FAF9F6; margin: 0 -16px; padding: 32px;">
+    @* 標題區 *@
+    <div class="d-flex align-center mb-8">
+        <MudText Typo="Typo.h5" Style="font-weight: 800; color: #A68966;
+            letter-spacing: 1px;">
+            Lifestyle
+        </MudText>
+        <MudDivider Class="ml-4 flex-grow-1"
+            Style="border-color: #EBE3D5; border-width: 2px;" />
+    </div>
+
+    <MudGrid Spacing="4">
+        @* --- 左側：單車數據看板 --- *@
+        <MudItem xs="12" md="8">
+            <MudPaper Elevation="0" Class="pa-6" Style="background: #FFFFFF; border-radius: 28px; border: 1px solid #F0EBE3;">
+                <div class="d-flex justify-space-between align-center mb-6">
+                    <div class="d-flex align-center">
+                        <MudAvatar Color="Color.Primary" Variant="Variant.Filled" Class="mr-3" Style="width:48px; height:48px;">
+                            <MudIcon Icon="@Icons.Material.Filled.DirectionsBike" />
+                        </MudAvatar>
+                        <div>
+                            <MudText Typo="Typo.h6" Style="font-weight: 700; color: #5C4B3A;">Cycling Stats</MudText>
+                            <MudText Typo="Typo.caption" Style="color: #A68966;">最近一次活動：大肚山繞圈</MudText>
+                        </div>
+                    </div>
+                    @* 這裡預留一個 Strava 連結圖示 *@
+                    <MudIconButton Icon="@Icons.Material.Filled.OpenInNew" Color="Color.Inherit" Size="Size.Small" />
+                </div>
+
+                <MudGrid>
+                    <MudItem xs="4">
+                        <div class="stat-item">
+                            <MudText Typo="Typo.caption"
+                                Style="color: #A68966;">
+                                Distance
+                            </MudText>
+                            <MudText Typo="Typo.h5"
+                                Style="font-weight: 800; color: #5C4B3A;">
+                                42.5
+                                <span class="stat-unit">km</span>
+                            </MudText>
+                        </div>
+                    </MudItem>
+                    <MudItem xs="4">
+                        <div class="stat-item">
+                            <MudText Typo="Typo.caption"
+                                Style="color: #A68966;">
+                                Elevation
+                            </MudText>
+                            <MudText Typo="Typo.h5"
+                                Style="font-weight: 800; color: #5C4B3A;">
+                                615
+                                <span class="stat-unit">m</span>
+                            </MudText>
+                        </div>
+                    </MudItem>
+                    <MudItem xs="4">
+                        <div class="stat-item">
+                            <MudText Typo="Typo.caption"
+                                Style="color: #A68966;">
+                                FTP
+                            </MudText>
+                            <MudText Typo="Typo.h5"
+                                Style="font-weight: 800; color: #5C4B3A;">
+                                210
+                                <span class="stat-unit">W</span>
+                            </MudText>
+                        </div>
+                    </MudItem>
+                    
+                    <MudItem xs="12" Class="mt-4">
+                        <div class="d-flex justify-space-between mb-2">
+                            <MudText Typo="Typo.caption" Style="color: #7A6F62;">本週目標里程 (150km)</MudText>
+                            <MudText Typo="Typo.caption" Style="font-weight: 700;">85%</MudText>
+                        </div>
+                        <MudProgressLinear Color="Color.Primary" Value="85" Size="Size.Large" Style="border-radius: 10px; background: #F5F2ED;" />
+                    </MudItem>
+                </MudGrid>
+            </MudPaper>
+        </MudItem>
+
+        @* --- 右側：咖啡與主子 --- *@
+        <MudItem xs="12" md="4">
+            <MudStack Spacing="3">
+                <MudPaper Elevation="0" Class="pa-5"
+                    Style="background: #F5F2ED; border-radius: 20px;">
+                    <div class="d-flex align-center">
+                        <MudIcon Icon="@Icons.Material.Filled.LocalCafe"
+                            Class="mr-3" Style="color: #A68966;" />
+                        <div>
+                            <MudText Typo="Typo.body1"
+                                Style="font-weight: 700; color: #5C4B3A;">
+                                    今日配方
+                            </MudText>
+                            <MudText Typo="Typo.body2"
+                                Style="color: #7A6F62;">
+                                衣索比亞 古吉 鳥拉嘎 日曬 / 93°C / 手沖
+                            </MudText>
+                        </div>
+                    </div>
+                </MudPaper>
+
+                @* --- 貓咪互動卡片 --- *@
+                <MudPaper Elevation="0" Class="pa-5 relative overflow-hidden" 
+                        Style="background: #EBE3D5; border-radius: 20px;
+                        cursor: pointer;" @onclick="InteractWithCat">
+                    <div class="d-flex align-center">
+                        <MudAvatar Style="background-color: #FFFFFF;"
+                            Class="mr-3">
+                            <MudIcon Icon="@_currentCatIcon"
+                                Size="Size.Small"
+                                Style="color: #A68966;" />
+                        </MudAvatar>
+                        <div>
+                            <MudText Typo="Typo.body1"
+                                Style="font-weight: 700; color: #5C4B3A;">
+                                    My Boss
+                            </MudText>
+                            <MudText Typo="Typo.caption"
+                                Style="color: #7A6F62;">
+                                @_catStatus
+                            </MudText>
+                        </div>
+                    </div>
+                    
+                    @* 加入一個隱形的小彩蛋提示 *@
+                    <MudText Typo="Typo.caption"
+                        Style="position:absolute; bottom:4px; right:12px;
+                            opacity:0.3; font-size: 10px;">
+                        (點擊主子進行互動)
                     </MudText>
-                    <MudChip T="string" Size="Size.Small"
-                        Variant="Variant.Text"
-                        Style="background: #F5F2ED; color: #A68966;">
-                        Active
-                    </MudChip>
-                </div>
-                <MudText Typo="Typo.body2" Style="color: #7A6F62;"
-                    Class="mb-4">
-                    習慣在坡道間找尋節奏，享受心率與瓦數交織的時刻。
-                </MudText>
-                <div class="d-flex gap-4">
-                    <div class="data-box">
-                        <MudText Typo="Typo.caption"
-                            Style="color: #A68966;">
-                            FTP
-                        </MudText>
-                        <MudText Typo="Typo.h6" Style="font-weight: 800;
-                            color: #5C4B3A;">
-                            210
-                            <span style="font-size: 12px; margin-left: 2px;">
-                                W
-                            </span>
-                        </MudText>
-                    </div>
-                    <div class="data-box">
-                        <MudText Typo="Typo.caption" 
-                            Style="color: #A68966;">
-                            Weekly
-                        </MudText>
-                        <MudText Typo="Typo.h6" Style="font-weight: 800;
-                            color: #5C4B3A;">200
-                            <span style="font-size: 12px; margin-left: 2px;">
-                                km
-                            </span>
-                        </MudText>
-                    </div>
-                </div>
-            </MudCardContent>
-        </MudCard>
-    </MudItem>
+                </MudPaper>
+            </MudStack>
+        </MudItem>
+    </MudGrid>
+</div>
 
-    @* --- 右側：咖啡與貓咪 (垂直排列) --- *@
-    <MudItem xs="12" md="5">
-        <MudStack Spacing="4">
-            @* 咖啡卡片 *@
-            <MudCard Elevation="0" Class="lifestyle-card" Style="background: #F5F2ED; border-radius: 20px;">
-                <MudCardHeader>
-                    <CardHeaderAvatar>
-                        <MudAvatar Style="background-color: #FFFFFF;">
-                            <MudIcon Icon="@Icons.Material.Filled.LocalCafe" Size="Size.Small" Style="color: #A68966;" />
-                        </MudAvatar>
-                    </CardHeaderAvatar>
-                    <CardHeaderContent>
-                        <MudText Typo="Typo.body1" Style="font-weight: 700; color: #5C4B3A;">Hand Drip</MudText>
-                        <MudText Typo="Typo.caption" Style="color: #7A6F62;">衣索比亞 · 日曬 · 93°C</MudText>
-                    </CardHeaderContent>
-                </MudCardHeader>
-            </MudCard>
+<style>
+    .stat-item {
+        padding: 12px;
+        background: #FAF9F6;
+        border-radius: 16px;
+        text-align: center;
+    }
+    .stat-unit {
+        font-size: 14px;
+        color: #A68966;
+        margin-left: 3px;
+    }
+</style>
 
-            @* 貓咪卡片 *@
-            <MudCard Elevation="0" Class="lifestyle-card" Style="background: #EBE3D5; border-radius: 20px;">
-                <MudCardHeader>
-                    <CardHeaderAvatar>
-                        <MudAvatar Style="background-color: #FFFFFF;">
-                            <MudIcon Icon="@Icons.Material.Filled.Pets" Size="Size.Small" Style="color: #A68966;" />
-                        </MudAvatar>
-                    </CardHeaderAvatar>
-                    <CardHeaderContent>
-                        <MudText Typo="Typo.body1" Style="font-weight: 700; color: #5C4B3A;">My Cat</MudText>
-                        <MudText Typo="Typo.caption" Style="color: #7A6F62;">目前狀態：肚子餓了正在抗議</MudText>
-                    </CardHeaderContent>
-                </MudCardHeader>
-            </MudCard>
-        </MudStack>
-    </MudItem>
-</MudGrid>
+@code {
+    private StravaActivity _latestActivity = new();
+    private bool _isLoading = true;
+    private string _catStatus = "正在沙發上進行監督作業";
+    private string _currentCatIcon = Icons.Material.Filled.Pets;
+    private int _interactionCount = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        _latestActivity.Name = "Morning Ride";
+        _latestActivity.Distance = 88.91;
+        _latestActivity.MovingTime = 204;
+        _latestActivity.TotalElevationGain = 235;
+    }
+
+    private void InteractWithCat()
+    {
+        _interactionCount++;
+
+        switch (_interactionCount % 6)
+        {
+            case 1:
+                _catStatus = "頭靠了過來，準備讓你摸摸";
+                _currentCatIcon = Icons.Material.Filled.Favorite;
+                break;
+            case 2:
+                _catStatus = "下巴抬了起來，讓你換個地方摸摸";
+                _currentCatIcon = Icons.Material.Filled.Favorite;
+                break;
+            case 3:
+                _catStatus = "感受到你的摸摸，發出了呼嚕聲";
+                _currentCatIcon = Icons.Material.Filled.Favorite;
+                break;
+            case 4:
+                _catStatus = "摸太久了，決定把你當成潔牙骨玩";
+                _currentCatIcon = Icons.Material.Filled.RemoveRedEye;
+                break;
+            case 5:
+                _catStatus = "玩累了，決定去吃乾乾";
+                _currentCatIcon = Icons.Material.Filled.Restaurant;
+                break;
+            default:
+                _catStatus = "吃飽了，準備開始長達 16 小時的午睡";
+                _currentCatIcon = Icons.Material.Filled.Bedtime;
+                break;
+        }
+    }
+}
