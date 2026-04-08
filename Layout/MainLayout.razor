@@ -1,5 +1,7 @@
 ﻿@inherits LayoutComponentBase
 
+@inject IJSRuntime JS
+
 <MudThemeProvider />
 <MudPopoverProvider />
 
@@ -20,21 +22,24 @@
         @Body
     </MudMainContent>
 
-    <MudAppBar Bottom="true" Fixed="true" Elevation="4"
-        Style="background-color: rgba(255,255,255,0.8);
-            backdrop-filter: blur(10px);">
+    <MudAppBar Bottom="true" Fixed="true" Elevation="4" 
+            Style="background-color: rgba(250, 249, 246, 0.9); backdrop-filter: blur(10px);">
         <MudSpacer />
-        <MudIconButton Icon="@Icons.Material.Filled.Home"
-            Color="Color.Primary" />
+        
+        <MudIconButton Icon="@Icons.Material.Filled.Home" Color="Color.Primary" 
+                    OnClick="@(() => ScrollToSection("home"))" />
         <MudSpacer />
-        <MudIconButton Icon="@Icons.Material.Filled.DirectionsBike"
-            Color="Color.Primary" />
+        
+        <MudIconButton Icon="@Icons.Material.Filled.DirectionsBike" Color="Color.Primary" 
+                    OnClick="@(() => ScrollToSection("lifestyle"))" />
         <MudSpacer />
-        <MudIconButton Icon="@Icons.Material.Filled.Coffee"
-            Color="Color.Primary" />
+        
+        <MudIconButton Icon="@Icons.Material.Filled.Code" Color="Color.Primary" 
+                    OnClick="@(() => ScrollToSection("skills"))" />
         <MudSpacer />
-        <MudIconButton Icon="@Icons.Material.Filled.Pets"
-            Color="Color.Primary" />
+        
+        <MudIconButton Icon="@Icons.Material.Filled.Terminal" Color="Color.Primary" 
+                    OnClick="@(() => ScrollToSection("projects"))" />
         <MudSpacer />
     </MudAppBar>
 </MudLayout>
@@ -70,4 +75,10 @@
             }
         }
     };
+
+    private async Task ScrollToSection(string elementId)
+    {
+        // 呼叫簡單的 JS 讓頁面平滑捲動
+        await JS.InvokeVoidAsync("scrollToElementId", elementId);
+    }
 }

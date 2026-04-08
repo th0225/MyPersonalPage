@@ -38,6 +38,21 @@
     <script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
     
     <!-- <script>navigator.serviceWorker.register('service-worker.js', { updateViaCache: 'none' });</script> -->
+
+    <script>
+        window.scrollToElementId = (elementId) => {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'nearest'
+                });
+            } else {
+                console.warn("Element not found:", elementId);
+            }
+        };
+    </script>
 </body>
 
 </html>
