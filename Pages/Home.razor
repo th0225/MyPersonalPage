@@ -1,7 +1,171 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<MudContainer MaxWidth="MaxWidth.Small" Class="mt-4">
+    @* --- 第一區：個人首頁大圖/影片 --- *@
+    <MudPaper Elevation="0" Class="relative overflow-hidden mb-8"
+        Style="border-radius: 24px; height: 350px;">
+        @* 設定 ObjectFit 為 Cover 確保佔滿 *@
+        <MudImage Src="images/img_1.JPG" 
+                  Alt="My Life" 
+                  ObjectFit="ObjectFit.Cover" 
+                  Class="w-100 h-100" 
+                  Style="display: block;" />
+        
+        @* 奶油風半透明文字遮罩 *@
+        <div class="hero-text-overlay">
+            <MudText Typo="Typo.h5" Style="font-weight: 800;
+                color: #5C4B3A;">
+                Hello, I'm Chi
+            </MudText>
+            <MudText Typo="Typo.subtitle2" Style="color: #7A6F62;">
+                在這裡分享我的單車紀錄與主子日常。
+            </MudText>
+        </div>
+    </MudPaper>
 
-<h1>Hello, world!!!</h1>
+    @* --- 第二區：生活區塊入口 --- *@
+    <MudGrid>
+        <MudItem xs="12">
+            <MudText Typo="Typo.h6" Class="mb-4"
+                Style="font-weight: 700; color: #A68966;">
+                Lifestyle
+            </MudText>
+        </MudItem>
+        
+        @* 單車卡片 *@
+        <MudItem xs="12">
+            <MudCard Elevation="0" Style="background-color: #F5F2ED;">
+                <MudCardHeader>
+                    <CardHeaderAvatar>
+                        <MudIcon Icon="@Icons.Material.Filled.DirectionsBike" />
+                    </CardHeaderAvatar>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.body1" Style="font-weight: 600;">
+                            Cycling Life
+                        </MudText>
+                        <MudText Typo="Typo.body2">
+                            最近一次 FTP 訓練：210W
+                        </MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+            </MudCard>
+        </MudItem>
 
-Welcome to your new app.
+        @* 咖啡卡片 *@
+        <MudItem xs="6">
+            <MudCard Elevation="0"
+                Style="background-color: #F5F2ED; height: 100%;">
+                <MudCardContent>
+                    <MudIcon Icon="@Icons.Material.Filled.LocalCafe" />
+                    <MudText Typo="Typo.body2" Class="mt-2">
+                        今日配方：<br/>衣索比亞 93°C 手沖
+                    </MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+
+        @* 貓咪卡片 *@
+        <MudItem xs="6">
+            <MudCard Elevation="0" Style="background-color: #F5F2ED;
+                height: 100%;">
+                <MudCardContent>
+                    <MudIcon Icon="@Icons.Material.Filled.Pets" />
+                    <MudText Typo="Typo.body2" Class="mt-2">
+                        主子狀態：<br/>正在睡眠中...
+                    </MudText>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+
+    @* --- 技能標籤區塊 --- *@
+    <div class="mt-8 mb-6 px-2">
+        <MudText Typo="Typo.h6" Class="mb-4" Style="font-weight: 700; color: #A68966;">Tech Stack</MudText>
+        
+        <div class="d-flex flex-wrap gap-2">
+            @* --- Programming --- *@
+            <MudTooltip Text="我的核心語言，專精於 .NET 生態系與 Blazor 開發">
+                <MudChip T="string" Icon="@Icons.Material.Filled.Code" Variant="Variant.Text" Style="background-color: #F5F2ED; color: #5C4B3A;">C# / .NET</MudChip>
+            </MudTooltip>
+            
+            <MudTooltip Text="效能至上，用於底層演算與機器視覺核心">
+                <MudChip T="string" Icon="@Icons.Material.Filled.SettingsEthernet" Variant="Variant.Text" Style="background-color: #F5F2ED; color: #5C4B3A;">C++</MudChip>
+            </MudTooltip>
+            
+            <MudTooltip Text="快速原型開發與 AI 模型訓練的利器">
+                <MudChip T="string" Icon="@Icons.Custom.Brands.Apple" Variant="Variant.Text" Style="background-color: #F5F2ED; color: #5C4B3A;">Python</MudChip>
+            </MudTooltip>
+
+            @* --- Vision --- *@
+            <MudTooltip Text="工業級視覺軟體專家，處理複雜的影像檢測邏輯">
+                <MudChip T="string" Icon="@Icons.Material.Filled.Visibility" Variant="Variant.Text" Style="background-color: #EBE3D5; color: #A68966; font-weight: 600;">Halcon</MudChip>
+            </MudTooltip>
+            
+            <MudTooltip Text="開源影像處理庫，實現靈活的電腦視覺方案">
+                <MudChip T="string" Icon="@Icons.Material.Filled.Camera" Variant="Variant.Text" Style="background-color: #EBE3D5; color: #A68966;">OpenCV</MudChip>
+            </MudTooltip>
+
+            @* --- AI --- *@
+            <MudTooltip Text="專注於神經網絡架構，從數據中挖掘規律">
+                <MudChip T="string" Icon="@Icons.Material.Filled.Psychology" Variant="Variant.Text" Style="background-color: #E5DCC3; color: #5C4B3A;">AI / Deep Learning</MudChip>
+            </MudTooltip>
+
+            @* --- Environment & DevOps --- *@
+            <MudTooltip Text="Arch Linux 愛好者，追求極致的系統掌控感">
+                <MudChip T="string" Icon="@Icons.Custom.Brands.Linux" Variant="Variant.Text" Style="background-color: #F5F2ED; color: #5C4B3A;">Linux</MudChip>
+            </MudTooltip>
+            
+            <MudTooltip Text="容器化部署，確保開發環境的一致性">
+                <MudChip T="string" Icon="@Icons.Material.Filled.BakeryDining" Variant="Variant.Text" Style="background-color: #F5F2ED; color: #5C4B3A;">Docker</MudChip>
+            </MudTooltip>
+            
+            <MudTooltip Text="嚴謹的版本控制，紀錄每一行代碼的成長">
+                <MudChip T="string" Icon="@Icons.Custom.Brands.GitHub" Variant="Variant.Text" Style="background-color: #F5F2ED; color: #5C4B3A;">Git</MudChip>
+            </MudTooltip>
+
+            @* --- Qt 標籤 --- *@
+            <MudTooltip Text="精通 Qt 框架，打造高效能、跨平台的桌面應用程式介面">
+                <MudChip T="string" Icon="@Icons.Material.Filled.WebAsset" Variant="Variant.Text" 
+                        Style="background-color: #F5F2ED; color: #5C4B3A;">
+                    Qt
+                </MudChip>
+            </MudTooltip>
+        </div>
+    </div>
+
+    @* --- 第三區：技術專案簡介 --- *@
+    <MudText Typo="Typo.h6" Class="mt-10 mb-4"
+        Style="font-weight: 700; color: #A68966;">
+        Current Project
+    </MudText>
+    <MudPaper Class="pa-6" Elevation="0"
+        Style="background-color: #FFFFFF; border: 1px solid #F0EBE3;">
+        <MudStack Row="true" AlignItems="AlignItems.Center">
+            <MudIcon Icon="@Icons.Material.Filled.Code"
+                Color="Color.Primary" />
+            <MudText Typo="Typo.body1" Style="font-weight: 600;">
+                Bento Order System
+            </MudText>
+        </MudStack>
+        <MudText Typo="Typo.body2" Class="mt-2" Color="Color.Secondary">
+            使用 Blazor 打造的點餐系統，目前正在開發中。
+        </MudText>
+    </MudPaper>
+
+</MudContainer>
+
+<style>
+    /* 確保圖片佔滿容器 */
+    .w-100 { width: 100% !important; }
+    .h-100 { height: 100% !important; }
+
+    /* 文字遮罩樣式 */
+    .hero-text-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px 20px;
+        background: linear-gradient(transparent, rgba(250, 249, 246, 0.95));
+    }
+</style>
