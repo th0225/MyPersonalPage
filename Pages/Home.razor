@@ -165,23 +165,123 @@
 
     @* --- 第四區：專案 (Projects) --- *@
     <div id="projects" class="py-10">
-        <MudText Typo="Typo.h6" Class="mb-6 ml-2" Style="font-weight: 700; color: #A68966;">Current Project</MudText>
-        <MudPaper Class="pa-6" Elevation="0" Style="background-color: #FFFFFF; border: 1px solid #F0EBE3; border-radius: 20px;">
+        <MudText Typo="Typo.h6" Class="mb-6 ml-2"
+            Style="font-weight: 700; color: #A68966;">
+            Current Project
+        </MudText>
+        <MudPaper Class="pa-6" Elevation="0"
+            Style="background-color: #FFFFFF; border: 1px solid #F0EBE3;
+                border-radius: 20px;">
             <MudStack Row="true" AlignItems="AlignItems.Center" Class="mb-3">
-                <MudAvatar Color="Color.Primary" Variant="Variant.Outlined" Size="Size.Small">
-                    <MudIcon Icon="@Icons.Material.Filled.RestaurantMenu" Size="Size.Small" />
+                <MudAvatar Color="Color.Primary" Variant="Variant.Outlined"
+                    Size="Size.Small">
+                    <MudIcon Icon="@Icons.Material.Filled.RestaurantMenu"
+                        Size="Size.Small" />
                 </MudAvatar>
-                <MudText Typo="Typo.body1" Style="font-weight: 600; color: #5C4B3A;">Bento Order System</MudText>
+                <MudText Typo="Typo.body1" Style="font-weight: 600;
+                    color: #5C4B3A;">
+                    Bento Order System
+                </MudText>
             </MudStack>
-            <MudText Typo="Typo.body2" Style="color: #7A6F62; line-height: 1.8;">
-                這是一個專為便當店設計的自動化點餐系統，基於 Blazor WebAssembly 開發，旨在提供極致的奶油風介面與流暢的訂餐流程。
+            <MudText Typo="Typo.body2" Style="color: #7A6F62;
+                line-height: 1.8;">
+                這是一個專為便當店設計的自動化點餐系統，基於 Blazor Server 開發，
+                旨在提供極致的奶油風介面與流暢的訂餐流程。
             </MudText>
             <div class="mt-4 d-flex gap-2">
-                <MudChip T="string" Size="Size.Small" Variant="Variant.Outlined" Color="Color.Primary">In Progress</MudChip>
-                <MudChip T="string" Size="Size.Small" Variant="Variant.Outlined">.NET 8</MudChip>
+                <MudChip T="string" Size="Size.Small"
+                    Variant="Variant.Outlined" Color="Color.Primary">
+                    In Progress
+                </MudChip>
+                <MudChip T="string" Size="Size.Small"
+                    Variant="Variant.Outlined">
+                    .NET 10
+                </MudChip>
             </div>
         </MudPaper>
     </div>
+
+    @* --- 第五區：社群連結 (Social Connect) --- *@
+<div id="connect" class="py-16">
+    <MudPaper Elevation="0" Class="pa-8 text-center" 
+              Style="background-color: #FAF9F6; border-radius: 32px;">
+        
+        <MudText Typo="Typo.h6" Class="mb-2" Style="font-weight: 700;
+            color: #5C4B3A;">
+            Let's Connect
+        </MudText>
+        <MudText Typo="Typo.body2" Class="mb-8" Style="color: #7A6F62;">
+            不管是技術交流、單車邀約或貓咪討論都很歡迎！
+        </MudText>
+
+        <div class="d-flex justify-center flex-wrap gap-3">
+            @* GitHub - 技術門面 *@
+            <MudTooltip Text="我的開源專案與代碼倉庫">
+                <MudFab Color="Color.Surface" 
+                        StartIcon="@Icons.Custom.Brands.GitHub" 
+                        Label="GitHub"
+                        Href="https://github.com/你的帳號" 
+                        Target="_blank"
+                        Style="background-color: #FAF9F6; color: #5C4B3A;
+                            text-transform: none; border-radius: 12px;" />
+            </MudTooltip>
+
+            @* Instagram - 生活日常 *@
+            <MudTooltip Text="日常、貓咪與生活碎片">
+                <MudFab Color="Color.Surface" 
+                        StartIcon="@Icons.Custom.Brands.Instagram" 
+                        Label="Instagram"
+                        Href="https://www.instagram.com/你的帳號" 
+                        Target="_blank"
+                        Style="background-color: #FAF9F6; color: #5C4B3A;
+                            text-transform: none; border-radius: 12px;" />
+            </MudTooltip>
+
+            @* LinkedIn - 職業身份 *@
+            <MudTooltip Text="專業技術與職場連結">
+                <MudFab Color="Color.Surface" 
+                        StartIcon="@Icons.Custom.Brands.LinkedIn" 
+                        Label="LinkedIn"
+                        Href="https://www.linkedin.com/in/你的ID" 
+                        Target="_blank"
+                        Style="background-color: #FAF9F6; color: #5C4B3A;
+                            text-transform: none; border-radius: 12px;" />
+            </MudTooltip>
+
+            @* Strava - 運動紀錄 *@
+            <MudTooltip Text="單車訓練與路線紀錄">
+                <MudFab Color="Color.Surface" 
+                        StartIcon="@Icons.Material.Filled.DirectionsBike" 
+                        Label="Strava"
+                        Href="https://www.strava.com/athletes/你的ID" 
+                        Target="_blank"
+                        Style="background-color: #FAF9F6; color: #5C4B3A;
+                            text-transform: none; border-radius: 12px;" />
+            </MudTooltip>
+
+            @* Threads - 碎碎念 *@
+            <MudTooltip Text="開發日常與隨筆">
+                <MudFab Color="Color.Surface" 
+                        StartIcon="@Icons.Material.Filled.AlternateEmail" 
+                        Label="Threads"
+                        Href="https://www.threads.net/" 
+                        Target="_blank"
+                        Style="background-color: #FAF9F6; color: #5C4B3A;
+                            text-transform: none; border-radius: 12px;" />
+            </MudTooltip>
+        </div>
+
+        @* 頁尾備註 *@
+        <div class="mt-12">
+            <MudDivider Class="mb-4" Style="border-color: #F0EBE3;
+                width: 40%; margin: 0 auto;" />
+            <MudText Typo="Typo.caption" Style="color: #A68966;
+                opacity: 0.6;">
+                © 2026 Chi. Built with Blazor & MudBlazor.
+            </MudText>
+        </div>
+    </MudPaper>
+</div>
 
     @* 底部留白，確保捲動空間 *@
     <div style="height: 100px;"></div>
