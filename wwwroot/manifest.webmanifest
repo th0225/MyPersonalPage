@@ -1,6 +1,7 @@
 {
-  "name": "MyPersonalPage",
-  "short_name": "Home",
+  "name": "Coffee · Cats · Cycling · Code",
+  "short_name": "C5 Life",
+  "description": "這裡是 Chicken Five 的個人空間，分享程式開發、單車數據與貓主子的日常。",
   "id": "./",
   "start_url": "./",
   "display": "standalone",
