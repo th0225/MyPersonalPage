@@ -23,35 +23,37 @@
 </MudContainer>
 
 <style>
-    /* 讓捲動位置更準確，預留給 AppBar 的空間 */
-    div[id] {
-        scroll-margin-top: 70px;
-    }
-
-    /* 讓區塊更有質感的微調 */
-    .section-container {
-        border-radius: 24px;
-        transition: all 0.3s ease;
-    }
-    
-    @* .mud-container {
-        max-width: 100vw; /* 確保容器寬度不會超過視窗 */
-        overflow-x: hidden; /* 強制隱藏橫向溢出 */
-    } *@
-
-    /* 確保卡片寬度撐滿父容器 */
-    .cycling-card {
+    /* 1. 解決白邊：確保底層背景色統一，並禁止橫向捲動 */
+    html, body {
+        background-color: #FFFDF9 !important;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
         width: 100%;
-        max-width: 1200px; /* 跟 AppBar 的最大寬度設定一致 */
-        margin-left: auto;
-        margin-right: auto;
     }
 
-    /* 手機端微調：縮小左右 Padding 讓內容有更多空間 */
+    /* 2. 修正 MudContainer：只在手機版 (小於 600px) 強制 100% */
     @@media (max-width: 600px) {
         .mud-container {
-            padding-left: 12px;
-            padding-right: 12px;
+            max-width: 100% !important; /* 手機版撐滿，防止白邊 */
+            padding-left: 16px !important;
+            padding-right: 16px !important;
         }
-}
+    }
+
+    /* 3. 在電腦版 (大於 600px)，我們不寫 !important，
+       讓 MudContainer MaxWidth="MaxWidth.Small" 自己發揮作用 */
+    @@media (min-width: 601px) {
+        .mud-container {
+            /* 這裡不需要寫寬度，MudBlazor 會自動根據 Small 設定為約 960px */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    /* 4. 修正內容物：確保所有 Section 內容都不會超出螢幕 */
+    .section-container, .cycling-card, img {
+        max-width: 100%;
+        box-sizing: border-box; /* 確保 Padding 不會增加寬度 */
+    }
 </style>
