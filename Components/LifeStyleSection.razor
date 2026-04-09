@@ -14,7 +14,7 @@
 
     <MudGrid Spacing="4">
         @* --- 單車數據看板 --- *@
-        <MudItem xs="12" md="8">
+        <MudItem xs="12" md="12">
             <MudPaper Elevation="0" Class="pa-6"
                 Style="background: #FFF9F3; border-radius: 24px;
                     border: 1px solid #EBE3D5;">
@@ -132,58 +132,59 @@
             </MudPaper>
         </MudItem>
 
-        @* --- 右側：咖啡與主子 --- *@
-        <MudItem xs="12" md="4">
-            <MudStack Spacing="3">
-                <MudPaper Elevation="0" Class="pa-5"
-                    Style="background: #F5F2ED; border-radius: 20px;">
-                    <div class="d-flex align-center">
-                        <MudIcon Icon="@Icons.Material.Filled.LocalCafe"
-                            Class="mr-3" Style="color: #A68966;" />
-                        <div>
-                            <MudText Typo="Typo.body1"
-                                Style="font-weight: 700; color: #5C4B3A;">
-                                    今日咖啡配方
-                            </MudText>
-                            <MudText Typo="Typo.body2"
-                                Style="color: #7A6F62;">
-                                衣索比亞 古吉 鳥拉嘎 日曬 / 93°C / 手沖
-                            </MudText>
-                        </div>
+        @* --- 咖啡看板 --- *@
+        <MudItem xs="12" md="12">
+            <MudPaper Elevation="0" Class="pa-5"
+                Style="background: #F5F2ED; border-radius: 20px;">
+                <div class="d-flex align-center">
+                    <MudIcon Icon="@Icons.Material.Filled.LocalCafe"
+                        Class="mr-3" Style="color: #A68966;" />
+                    <div>
+                        <MudText Typo="Typo.body1"
+                            Style="font-weight: 700; color: #5C4B3A;">
+                                今日咖啡配方
+                        </MudText>
+                        <MudText Typo="Typo.body2"
+                            Style="color: #7A6F62;">
+                            衣索比亞 古吉 鳥拉嘎 日曬 / 93°C / 手沖
+                        </MudText>
                     </div>
-                </MudPaper>
+                </div>
+            </MudPaper>
+        </MudItem>
 
-                @* --- 貓咪互動卡片 --- *@
-                <MudPaper Elevation="0" Class="pa-5 relative overflow-hidden" 
-                        Style="background: #EBE3D5; border-radius: 20px;
-                        cursor: pointer;" @onclick="InteractWithCat">
-                    <div class="d-flex align-center">
-                        <MudAvatar Style="background-color: #FFFFFF;"
-                            Class="mr-3">
-                            <MudIcon Icon="@_currentCatIcon"
-                                Size="Size.Small"
-                                Style="color: #A68966;" />
-                        </MudAvatar>
-                        <div>
-                            <MudText Typo="Typo.body1"
-                                Style="font-weight: 700; color: #5C4B3A;">
-                                    My Boss
-                            </MudText>
-                            <MudText Typo="Typo.caption"
-                                Style="color: #7A6F62;">
-                                @_catStatus
-                            </MudText>
-                        </div>
+        @* --- 主子戶動看板 --- *@
+        <MudItem xs="12" md="12">
+            @* --- 貓咪互動卡片 --- *@
+            <MudPaper Elevation="0" Class="pa-5 relative overflow-hidden" 
+                    Style="background: #EBE3D5; border-radius: 20px;
+                    cursor: pointer;" @onclick="InteractWithCat">
+                <div class="d-flex align-center">
+                    <MudAvatar Style="background-color: #FFFFFF;"
+                        Class="mr-3">
+                        <MudIcon Icon="@_currentCatIcon"
+                            Size="Size.Small"
+                            Style="color: #A68966;" />
+                    </MudAvatar>
+                    <div>
+                        <MudText Typo="Typo.body1"
+                            Style="font-weight: 700; color: #5C4B3A;">
+                                My Boss
+                        </MudText>
+                        <MudText Typo="Typo.caption"
+                            Style="color: #7A6F62;">
+                            @_catStatus
+                        </MudText>
                     </div>
-                    
-                    @* 加入一個隱形的小彩蛋提示 *@
-                    <MudText Typo="Typo.caption"
-                        Style="position:absolute; bottom:4px; right:12px;
-                            opacity:0.3; font-size: 10px;">
-                        (點擊主子進行互動)
-                    </MudText>
-                </MudPaper>
-            </MudStack>
+                </div>
+                
+                @* 加入一個隱形的小彩蛋提示 *@
+                <MudText Typo="Typo.caption"
+                    Style="position:absolute; bottom:4px; right:12px;
+                        opacity:0.3; font-size: 10px;">
+                    (點擊主子進行互動)
+                </MudText>
+            </MudPaper>
         </MudItem>
     </MudGrid>
 </div>
