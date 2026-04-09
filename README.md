@@ -3,7 +3,7 @@
 這裡是 **Chicken Five** 的個人入口網站，一個融合了生活溫度與開發技術的實驗空間。
 
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fme.dev-chi.com&label=me.dev-chi.com&style=flat-square&color=FDF9F6)](https://me.dev-chi.com)
-[![Build and Deploy](https://github.com/th0225/MyPersonalPage/actions/workflows/main.yml/badge.svg)](https://github.com/th0225/MyPersonalPage/actions/workflows/main.yml)
+[![Build and Deploy](https://github.com/th0225/MyPersonalPage/actions/workflows/deploy.yml/badge.svg)](https://github.com/th0225/MyPersonalPage/actions/workflows/deploy.yml)
 
 
 ## 🎨 關於這個空間
