@@ -1,87 +1,92 @@
-<div id="connect" class="py-12 section-container"
-    style="background-color: #FAF9F6;">
+<div id="connect" class="py-12 section-container" style="background-color: transparent;">
     <MudPaper Elevation="0" Class="pa-8 text-center" 
-              Style="background-color: #FAF9F6; border-radius: 32px;">
+              Style="background-color: var(--mud-palette-surface); border-radius: 32px;">
         
         <MudText Typo="Typo.h6"
             Class="mb-2 d-flex align-center justify-center"
-            Style="font-weight: 700; color: #5C4B3A;">
+            Style="font-weight: 700; color: var(--mud-palette-text-primary);">
             Let's Connect
         </MudText>
         <MudText Typo="Typo.body2"
             Class="mb-8 d-flex align-center justify-center"
-            Style="color: #7A6F62;">
+            Style="color: var(--mud-palette-text-secondary);">
             不管是技術交流、單車邀約或貓咪討論都很歡迎！
         </MudText>
 
         <div class="d-flex justify-center flex-wrap gap-3">
-            @* GitHub - 技術門面 *@
             <MudTooltip Text="我的開源專案與代碼倉庫">
-                <MudFab Color="Color.Surface" 
+                <MudFab Color="Color.Default" 
                         StartIcon="@Icons.Custom.Brands.GitHub" 
                         Label="GitHub"
                         Href="https://github.com/th0225" 
                         Target="_blank"
-                        Style="background-color: #FAF9F6; color: #5C4B3A;
-                            text-transform: none; border-radius: 12px;" />
+                        Class="social-fab" />
             </MudTooltip>
 
-            @* Instagram - 生活日常 *@
             <MudTooltip Text="日常、貓咪與生活碎片">
-                <MudFab Color="Color.Surface" 
+                <MudFab Color="Color.Default" 
                         StartIcon="@Icons.Custom.Brands.Instagram" 
                         Label="Instagram"
                         Href="https://www.instagram.com/chicken__five" 
                         Target="_blank"
-                        Style="background-color: #FAF9F6; color: #5C4B3A;
-                            text-transform: none; border-radius: 12px;" />
+                        Class="social-fab" />
             </MudTooltip>
 
-            @* LinkedIn - 職業身份 *@
             <MudTooltip Text="專業技術與職場連結">
-                <MudFab Color="Color.Surface" 
+                <MudFab Color="Color.Default" 
                         StartIcon="@Icons.Custom.Brands.LinkedIn" 
                         Label="LinkedIn"
                         Href="https://www.linkedin.com/in/terry-hung-590162147" 
                         Target="_blank"
-                        Style="background-color: #FAF9F6; color: #5C4B3A;
-                            text-transform: none; border-radius: 12px;" />
+                        Class="social-fab" />
             </MudTooltip>
 
-            @* Strava - 運動紀錄 *@
             <MudTooltip Text="單車訓練與路線紀錄">
-                <MudFab Color="Color.Surface" 
+                <MudFab Color="Color.Default" 
                         StartIcon="@Icons.Material.Filled.DirectionsBike" 
                         Label="Strava"
                         Href="https://www.strava.com/athletes/25929657" 
                         Target="_blank"
-                        Style="background-color: #FAF9F6; color: #5C4B3A;
-                            text-transform: none; border-radius: 12px;" />
+                        Class="social-fab" />
             </MudTooltip>
 
-            @* Threads - 碎碎念 *@
             <MudTooltip Text="開發日常與隨筆">
-                <MudFab Color="Color.Surface" 
+                <MudFab Color="Color.Default" 
                         StartIcon="@Icons.Material.Filled.AlternateEmail" 
                         Label="Threads"
                         Href="@_threadsUrl" 
                         Target="_blank"
-                        Style="background-color: #FAF9F6; color: #5C4B3A;
-                            text-transform: none; border-radius: 12px;" />
+                        Class="social-fab" />
             </MudTooltip>
         </div>
 
         @* 頁尾備註 *@
         <div class="mt-12">
-            <MudDivider Class="mb-4" Style="border-color: #F0EBE3;
-                width: 40%; margin: 0 auto;" />
-            <MudText Typo="Typo.caption" Style="color: #A68966;
-                opacity: 0.6;">
+            <MudDivider Class="mb-4" 
+                Style="border-color: var(--mud-palette-divider); width: 40%; margin: 0 auto;" />
+            <MudText Typo="Typo.caption" Style="color: var(--mud-palette-primary); opacity: 0.6;">
                 © 2026 Chicken Five. Built with Blazor & MudBlazor.
             </MudText>
         </div>
     </MudPaper>
 </div>
+
+<style>
+    /* 針對 Social Fab 的統一質感控制 */
+    .social-fab {
+        background-color: var(--mud-palette-background) !important;
+        color: var(--mud-palette-text-primary) !important;
+        text-transform: none !important;
+        border-radius: 12px !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .social-fab:hover {
+        background-color: var(--mud-palette-primary) !important;
+        color: var(--mud-palette-background) !important;
+        transform: translateY(-3px);
+    }
+</style>
 
 @code {
     private string _threadsUrl =

@@ -5,7 +5,7 @@
 <MudThemeProvider />
 <MudPopoverProvider />
 
-<MudThemeProvider Theme="@CustomTheme"/>
+<MudThemeProvider Theme="@CustomTheme" @bind-IsDarkMode="@_isDarkMode"/>
 
 <MudLayout>
     <MudAppBar Elevation="0" Class="main-appbar">
@@ -13,36 +13,39 @@
             Chicken Five
         </MudText>
         <MudSpacer />
+        
+        @* 修正按鈕顏色為 Color.Inherit，它會自動抓取主題的 TextPrimary *@
+        <MudIconButton
+            Icon="@(_isDarkMode ? Icons.Material.Filled.LightMode : Icons.Material.Filled.DarkMode)" 
+            Color="Color.Inherit" 
+            OnClick="@DarkModeToggle" />
+        
         <MudIconButton Icon="@Icons.Custom.Brands.Instagram"
             Color="Color.Inherit"
             Href="https://www.instagram.com/chicken__five"
             Target="_blank" />
+            
         <MudIconButton Icon="@Icons.Custom.Brands.GitHub"
-            Color="Color.Inherit" Href="https://github.com/th0225"
+            Color="Color.Inherit" 
+            Href="https://github.com/th0225"
             Target="_blank" />
     </MudAppBar>
 
-    <MudMainContent Class="pb-16" Style="background-color: #FAF9F6;">
+    <MudMainContent Class="pb-16" Style="@MainContentStyle">
         @Body
     </MudMainContent>
 
-    <MudAppBar Bottom="true" Fixed="true" Elevation="0" 
-        Style="background-color: rgba(250, 249, 246, 0.9);
-        backdrop-filter: blur(10px);">
+    <MudAppBar Bottom="true" Fixed="true" Elevation="0" Class="bottom-nav">
         <MudSpacer />
-        
         <MudIconButton Icon="@Icons.Material.Filled.Home" Color="Color.Primary" 
                     OnClick="@(() => ScrollToSection("home"))" />
         <MudSpacer />
-        
         <MudIconButton Icon="@Icons.Material.Filled.DirectionsBike" Color="Color.Primary" 
                     OnClick="@(() => ScrollToSection("lifestyle"))" />
         <MudSpacer />
-        
         <MudIconButton Icon="@Icons.Material.Filled.Code" Color="Color.Primary" 
                     OnClick="@(() => ScrollToSection("skills"))" />
         <MudSpacer />
-        
         <MudIconButton Icon="@Icons.Material.Filled.Terminal" Color="Color.Primary" 
                     OnClick="@(() => ScrollToSection("projects"))" />
         <MudSpacer />
@@ -53,35 +56,42 @@
 </MudLayout>
 
 <style>
-    /* 修正頂部 AppBar 質感 */
+    /* 頂部導覽列：背景隨主題變動，圖標顏色強制跟隨 TextPrimary */
     .main-appbar.mud-appbar {
-        background-color: rgba(250, 249, 246, 0.6) !important; 
+        background-color: var(--mud-palette-appbar-background) !important;
         backdrop-filter: blur(20px) saturate(180%) !important;
         -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
         border-bottom: 0.5px solid rgba(166, 137, 102, 0.15) !important;
-        color: #A68966 !important; /* 圖標顏色 */
+        color: var(--mud-palette-text-primary) !important; 
     }
 
-    /* 強制設定標題文字顏色，確保不會隱形 */
     .appbar-title {
-        color: #5F4B32 !important; /* 使用你主題中的深咖色 */
+        color: var(--mud-palette-text-primary) !important;
         font-weight: 800 !important;
     }
 
-    /* 修正底部導覽列質感 */
+    /* 底部導覽列：同樣隨主題變動背景 */
     .bottom-nav.mud-appbar {
-        background-color: rgba(250, 249, 246, 0.8) !important;
+        background-color: var(--mud-palette-appbar-background) !important;
         backdrop-filter: blur(10px) !important;
         -webkit-backdrop-filter: blur(10px) !important;
     }
 </style>
 
 @code {
+    private bool _isDarkMode;
+
+    private string MainContentStyle => _isDarkMode
+        ? "background-color: #1A1A19;" 
+        : "background-color: #FAF9F6;";
+
+    private void DarkModeToggle() => _isDarkMode = !_isDarkMode;
+
     private MudTheme CustomTheme = new MudTheme()
     {
         PaletteLight = new PaletteLight()
         {
-            Primary = "#E6D5B8",          // 杏色/奶茶色 (主要色)
+            Primary = "#A68966",          // 杏色/奶茶色 (主要色)
             Secondary = "#F0E5D1",        // 淺米色 (次要色)
             Background = "#FFFDF9",       // 奶油白背景
             AppbarBackground = "#FFFDF9", // 與背景統一，營造無邊框感
@@ -91,6 +101,17 @@
             ActionDefault = "#E6D5B8",    // 圖標與動作顏色
             DrawerBackground = "#FFFDF9",
             Divider = "#F0E5D1"
+        },
+        PaletteDark = new PaletteDark()
+        {
+            Primary = "#E6D5B8",          // 深色模式下，亮奶油色作為重點色
+            Background = "#1A1A19",       // 深焙咖啡底色
+            Surface = "#262624",          // 卡片表面顏色 (稍亮一點點)
+            AppbarBackground = "rgba(26, 26, 25, 0.6)",
+            TextPrimary = "#E3DED0",      // 暖米白文字
+            TextSecondary = "#8D7B68",    // 淺灰咖文字
+            ActionDefault = "#E6D5B8",
+            Divider = "#333330"
         },
         LayoutProperties = new LayoutProperties()
         {
@@ -107,6 +128,14 @@
             }
         }
     };
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            StateHasChanged();
+        }
+    }
 
     private async Task ScrollToSection(string elementId)
     {

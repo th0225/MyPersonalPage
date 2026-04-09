@@ -1,34 +1,32 @@
-<div id="projects" class="py-12 section-container"
-    style="background-color: #FAF9F6;">
-        @* 標題區 *@
+<div id="projects" class="py-12 ">
     <div class="d-flex align-center mb-8">
-        <MudText Typo="Typo.h5" Style="font-weight: 800; color: #A68966;
-            letter-spacing: 1px;">
+        <MudText Typo="Typo.h5" Color="Color.Primary"
+            Style="font-weight: 800; letter-spacing: 1px;">
             Project
         </MudText>
-        <MudDivider Class="ml-4 flex-grow-1"
-            Style="border-color: #EBE3D5; border-width: 2px;" />
+        <MudDivider Class="ml-4 flex-grow-1 section-divider" />
     </div>
+
     <MudPaper Class="pa-8" Elevation="0"
-        Style="background-color: #FFFFFF; border: 1.5px solid 
-            #F0EBE3; border-radius: 28px; overflow: hidden;">
+        Style="background-color: var(--mud-palette-surface);
+            border: 1.5px solid var(--mud-palette-divider);
+            border-radius: 28px; overflow: hidden;">
         <MudGrid Spacing="4">
             <MudItem xs="12" md="6"
                 Class="d-flex flex-column justify-center mb-12">
-                <MudStack Row="true" AlignItems="AlignItems.Center"
-                    Class="mb-4">
-                    <MudAvatar Style="background-color: #F8F3ED;"
-                        Size="Size.Small">
+                
+                <MudStack Row="true" AlignItems="AlignItems.Center" Class="mb-4">
+                    <MudAvatar Style="background-color: var(--mud-palette-divider);" Size="Size.Small">
                         <MudIcon Icon="@Icons.Material.Filled.RestaurantMenu"
-                            Style="color: #A68966;" Size="Size.Small" />
+                            Color="Color.Primary" Size="Size.Small" />
                     </MudAvatar>
                     <MudText Typo="Typo.body1"
-                        Style="font-weight: 800; color: #5C4B3A;">
+                        Style="font-weight: 800; color: var(--mud-palette-text-primary);">
                         Bento Order System
                     </MudText>
                 </MudStack>
-                <MudText Typo="Typo.body2" Style="color: #7A6F62;
-                    line-height: 1.8;" Class="mb-5">
+
+                <MudText Typo="Typo.body2" Style="color: var(--mud-palette-text-secondary); line-height: 1.8;" Class="mb-5">
                     <b>餐點訂購自動化方案</b>：整合 Blazor Server 與 Line Bot 實現在線點餐與自動下單。
                     <br />
                     <span style="font-size: 0.8rem;">
@@ -37,16 +35,14 @@
                         • <b>奶油風 UI</b>：極簡介面設計，提升員工訂餐意願。
                     </span>
                 </MudText>
+
                 <div class="d-flex gap-2 mb-6">
-                    <MudChip T="string" Size="Size.Small"
-                        Variant="Variant.Text"
-                        Style="background: #F8F3ED; color: #A68966;
-                            font-weight: 600;">
+                    <MudChip T="string" Size="Size.Small" Variant="Variant.Text"
+                        Style="background: var(--mud-palette-divider); color: var(--mud-palette-primary); font-weight: 600;">
                             In Progress
                     </MudChip>
-                    <MudChip T="string" Size="Size.Small"
-                        Variant="Variant.Text" Style="background: #F8F3ED;
-                        color: #A68966; font-weight: 600;">
+                    <MudChip T="string" Size="Size.Small" Variant="Variant.Text" 
+                        Style="background: var(--mud-palette-divider); color: var(--mud-palette-primary); font-weight: 600;">
                         .NET 10
                     </MudChip>
                 </div>
@@ -54,74 +50,29 @@
                 <div class="d-flex gap-3 mt-auto">
                     <MudButton Variant="Variant.Text"
                         StartIcon="@Icons.Custom.Brands.GitHub"
-                        Style="color: #A68966; font-weight: 700;"
+                        Color="Color.Primary"
+                        Style="font-weight: 700;"
                         Target="_blank"
                         Href="https://github.com/th0225/bento-order">
                         CODE
                     </MudButton>
                     <MudButton Variant="Variant.Filled" Disabled
-                        Style="background: #A68966; color: white;
-                        border-radius: 12px; font-weight: 700;">
+                        Color="Color.Primary"
+                        Style="border-radius: 12px; font-weight: 700;">
                         LIVE DEMO
                     </MudButton>
                 </div>
             </MudItem>
 
-            <MudItem xs="12" md="6"
-                Class="d-flex align-center justify-center relative
-                    mockup-container">
+            <MudItem xs="12" md="6" Class="mockup-container">
                 <MudImage Src="images/bento-desktop.png" 
                           Alt="Desktop Preview"
-                          Elevation="0"
-                          ObjectFit="ObjectFit.Cover"
-                          Class="mockup-desktop"
-                          Style="border-radius: 12px;
-                            border: 4px solid #FDFBF8;
-                            box-shadow: 0 8px 30px rgba(166,137,102,0.1);"
-                            />
+                          Class="mockup-desktop" />
                 
                 <MudImage Src="images/bento-mobile.png" 
                           Alt="Mobile Preview"
-                          Elevation="0"
-                          ObjectFit="ObjectFit.Cover"
-                          Class="mockup-mobile"
-                          Style="border-radius: 16px;
-                            border: 4px solid #FFFFFF;
-                            box-shadow: 0 15px 40px rgba(166,137,102,0.15);"
-                            />
+                          Class="mockup-mobile" />
             </MudItem>
         </MudGrid>
     </MudPaper>
 </div>
-
-<style>
-    /* RWD 手機版微調 */
-    @@media (max-width: 960px) {
-        .mockup-container {
-            height: 300px; /* 手機版固定高度，避免重疊過多 */
-            margin-top: 20px;
-        }
-    }
-
-    .relative { position: relative; }
-
-    /* 電腦版截圖樣式 */
-    .mockup-desktop {
-        width: 85%;
-        height: auto;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: 1;
-    }
-
-    /* 手機版截圖樣式 */
-    .mockup-mobile {
-        width: 35%; /* 突出手機版 */
-        height: auto;
-        position: absolute;
-        right: 1%;
-        top: 0;
-        z-index: 2; /* 在電腦版之上 */
-    }
-</style>

@@ -1,79 +1,74 @@
-<div id="skills" class="py-12 section-container"
-    style="background-color: #FAF9F6;">
-    @* 標題區 *@
+<div id="skills" class="py-12 section-container" style="background-color: transparent;">
     <div class="d-flex align-center mb-8">
-        <MudText Typo="Typo.h5" Style="font-weight: 800; color: #A68966;
-            letter-spacing: 1px;">
+        <MudText Typo="Typo.h5" Color="Color.Primary" Style="font-weight: 800; letter-spacing: 1px;">
             TechStack
         </MudText>
-        <MudDivider Class="ml-4 flex-grow-1"
-            Style="border-color: #EBE3D5; border-width: 2px;" />
+        <MudDivider Class="ml-4 flex-grow-1 section-divider" />
     </div>
 
     <MudPaper Elevation="0" Class="pa-6 d-flex flex-wrap gap-2"
-        style="background-color: #F5F2ED; border-radius: 24px;
-            border: 1px solid #EBE3D5;">
+        style="background-color: var(--mud-palette-surface); border-radius: 24px;
+            border: 1px solid var(--mud-palette-divider);">
+        
         <MudTooltip Text="C# / .NET 生態系">
-            <MudChip T="string" Icon="@Icons.Material.Filled.Code"
-                Variant="Variant.Text"
-                Style="background-color: #FFFFFF; color: #5C4B3A;">
+            <MudChip T="string" Icon="@Icons.Material.Filled.Code" Variant="Variant.Text"
+                Style="background-color: var(--mud-palette-background); color: var(--mud-palette-text-primary);">
                 C# / .NET
             </MudChip>
         </MudTooltip>
+
         <MudTooltip Text="Qt 跨平台開發">
-            <MudChip T="string" Icon="@Icons.Material.Filled.WebAsset"
-                Variant="Variant.Text"
-                Style="background-color: #FFFFFF; color: #5C4B3A;">
+            <MudChip T="string" Icon="@Icons.Material.Filled.WebAsset" Variant="Variant.Text"
+                Style="background-color: var(--mud-palette-background); color: var(--mud-palette-text-primary);">
                 Qt / C++
             </MudChip>
         </MudTooltip>
+
         <MudTooltip Text="影像演算法專家">
-            <MudChip T="string" Icon="@Icons.Material.Filled.Visibility"
-                Variant="Variant.Text"
-                Style="background-color: #EBE3D5; color: #A68966;
-                font-weight: 600;">
+            <MudChip T="string" Icon="@Icons.Material.Filled.Visibility" Variant="Variant.Text"
+                Style="background-color: var(--mud-palette-divider); color: var(--mud-palette-primary); font-weight: 600;">
                 Halcon
             </MudChip>
         </MudTooltip>
+
         <MudTooltip Text="Python 原型開發">
-            <MudChip T="string" Icon="@Icons.Material.Filled.Terminal"
-                Variant="Variant.Text"
-                Style="background-color: #FFFFFF; color: #5C4B3A;">
+            <MudChip T="string" Icon="@Icons.Material.Filled.Terminal" Variant="Variant.Text"
+                Style="background-color: var(--mud-palette-background); color: var(--mud-palette-text-primary);">
                 Python
             </MudChip>
         </MudTooltip>
+
         <MudTooltip Text="機器視覺開發">
-            <MudChip T="string" Icon="@Icons.Material.Filled.Camera"
-                Variant="Variant.Text"
-                Style="background-color: #EBE3D5; color: #A68966;">
+            <MudChip T="string" Icon="@Icons.Material.Filled.Camera" Variant="Variant.Text"
+                Style="background-color: var(--mud-palette-divider); color: var(--mud-palette-primary);">
                 OpenCV
             </MudChip>
         </MudTooltip>
+
         <MudTooltip Text="深度學習研究">
-            <MudChip T="string" Icon="@Icons.Material.Filled.Psychology"
-                Variant="Variant.Text"
-                Style="background-color: #E5DCC3; color: #5C4B3A;">
+            <MudChip T="string" Icon="@Icons.Material.Filled.Psychology" Variant="Variant.Text"
+                Style="background-color: var(--mud-palette-divider); color: var(--mud-palette-text-primary);">
                 Deep Learning
             </MudChip>
         </MudTooltip>
+
         <MudTooltip Text="Linux 作業系統">
-            <MudChip T="string" Icon="@Icons.Custom.Brands.Linux"
-                Variant="Variant.Text"
-                Style="background-color: #FFFFFF; color: #5C4B3A;">
+            <MudChip T="string" Icon="@Icons.Custom.Brands.Linux" Variant="Variant.Text"
+                Style="background-color: var(--mud-palette-background); color: var(--mud-palette-text-primary);">
                 Linux
             </MudChip>
         </MudTooltip>
+
         <MudTooltip Text="Docker 部署">
-            <MudChip T="string" Icon="@Icons.Material.Filled.BakeryDining"
-                Variant="Variant.Text"
-                Style="background-color: #FFFFFF; color: #5C4B3A;">
+            <MudChip T="string" Icon="@Icons.Material.Filled.BakeryDining" Variant="Variant.Text"
+                Style="background-color: var(--mud-palette-background); color: var(--mud-palette-text-primary);">
                 Docker
             </MudChip>
         </MudTooltip>
+
         <MudTooltip Text="Git 版本控制">
-            <MudChip T="string" Icon="@Icons.Custom.Brands.GitHub"
-                Variant="Variant.Text"
-                Style="background-color: #FFFFFF; color: #5C4B3A;">
+            <MudChip T="string" Icon="@Icons.Custom.Brands.GitHub" Variant="Variant.Text"
+                Style="background-color: var(--mud-palette-background); color: var(--mud-palette-text-primary);">
                 Git
             </MudChip>
         </MudTooltip>
