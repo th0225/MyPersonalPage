@@ -8,7 +8,7 @@
 <MudThemeProvider Theme="@CustomTheme"/>
 
 <MudLayout>
-    <MudAppBar Elevation="0">
+    <MudAppBar Elevation="0" Class="main-appbar">
         <MudText Typo="Typo.h6" Style="font-weight: 800;">.Home</MudText>
         <MudSpacer />
         <MudIconButton Icon="@Icons.Custom.Brands.Instagram"
@@ -51,21 +51,27 @@
 </MudLayout>
 
 <style>
-    <style>
-    .mud-appbar {
-        /* 1. 背景色：增加一點飽和度，避免看起來像灰色 */
+    /* 修正頂部 AppBar 質感 */
+    .main-appbar.mud-appbar {
         background-color: rgba(250, 249, 246, 0.6) !important; 
-        
-        /* 2. 模糊度：手機上 15px - 20px 效果最明顯 */
         backdrop-filter: blur(20px) saturate(180%) !important;
-        
-        /* 3. iOS 必備：沒有這行，iPhone 效果會很差 */
         -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
-        
-        /* 4. 底線：增加一條極細的半透明邊界，這能讓透明感更強 */
         border-bottom: 0.5px solid rgba(166, 137, 102, 0.15) !important;
+        color: #A68966 !important; /* 圖標顏色 */
     }
-</style>
+
+    /* 強制設定標題文字顏色，確保不會隱形 */
+    .appbar-title {
+        color: #5F4B32 !important; /* 使用你主題中的深咖色 */
+        font-weight: 800 !important;
+    }
+
+    /* 修正底部導覽列質感 */
+    .bottom-nav.mud-appbar {
+        background-color: rgba(250, 249, 246, 0.8) !important;
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+    }
 </style>
 
 @code {
