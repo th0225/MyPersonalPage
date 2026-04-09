@@ -9,7 +9,11 @@
 
 <MudLayout>
     <MudAppBar Elevation="0"
-        Style="background-color: #FAF9F6; color: #A68966;">
+        Style="background-color: rgba(250, 249, 246, 0.7); 
+           backdrop-filter: blur(12px); 
+           -webkit-backdrop-filter: blur(12px); 
+           color: #A68966; 
+           border-bottom: 1px solid rgba(230, 213, 184, 0.3);">
         <MudText Typo="Typo.h6" Style="font-weight: 800;">.Home</MudText>
         <MudSpacer />
         <MudIconButton Icon="@Icons.Custom.Brands.Instagram"
@@ -26,7 +30,8 @@
     </MudMainContent>
 
     <MudAppBar Bottom="true" Fixed="true" Elevation="0" 
-            Style="background-color: rgba(250, 249, 246, 0.9); backdrop-filter: blur(10px);">
+        Style="background-color: rgba(250, 249, 246, 0.9);
+        backdrop-filter: blur(10px);">
         <MudSpacer />
         
         <MudIconButton Icon="@Icons.Material.Filled.Home" Color="Color.Primary" 
@@ -49,6 +54,17 @@
                OnClick="@(() => ScrollToSection("connect"))" />
     </MudAppBar>
 </MudLayout>
+
+<style>
+    /* 修正原本的 .main-appbar，確保樣式生效 */
+    .mud-appbar {
+        /* 使用 backdrop-filter 時，背景必須帶有透明度 */
+        background-color: rgba(250, 249, 246, 0.7) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        transition: background-color 0.3s ease; /* 增加捲動時的滑順感 */
+    }
+</style>
 
 @code {
     private MudTheme CustomTheme = new MudTheme()
