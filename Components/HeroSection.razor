@@ -1,8 +1,14 @@
+@* 增加內容層級的確保 *@
 <div id="home" class="mb-10">
     <MudPaper Elevation="0" Class="section-container relative overflow-hidden" Style="height: 380px;">
-        <MudImage Src="images/img_1.JPG" Alt="My Life" ObjectFit="ObjectFit.Cover" Class="w-100 h-100" />
-        <div class="hero-text-overlay">
-            <MudText Typo="Typo.subtitle2" Style="color: var(--mud-palette-text-primary); font-weight: 600; letter-spacing: 1px;">
+        @* 圖片層級設為 1 *@
+        <MudImage Src="images/img_1.JPG" Alt="My Life" ObjectFit="ObjectFit.Cover" 
+                  Class="w-100 h-100" Style="z-index: 1;" />
+        
+        @* 漸層層級設為 2 *@
+        <div class="hero-text-overlay" style="z-index: 2;">
+            <MudText Typo="Typo.subtitle2" 
+                    Style="color: var(--mud-palette-text-primary); font-weight: 600; letter-spacing: 1px;">
                 Code / Cycling / Coffee / Cats
             </MudText>
         </div>

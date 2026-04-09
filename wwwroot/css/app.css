@@ -101,12 +101,21 @@ code {
 /* --- Home 區塊：Hero Overlay --- */
 .hero-text-overlay {
     position: absolute;
-    bottom: 0;
+    bottom: -1px; 
     left: 0;
     width: 100%;
     padding: 40px 20px 30px 20px;
-    /* 這裡使用主題的背景色變數做漸層，確保深色模式不穿幫 */
-    background: linear-gradient(transparent, var(--mud-palette-background));
+    
+    /* 關鍵修正：不要只寫 transparent */
+    background: linear-gradient(
+        to top, 
+        var(--mud-palette-background) 0%, 
+        var(--mud-palette-background-alpha, rgba(250, 249, 246, 0)) 100%
+    );
+    
+    /* 加入 Apple 專用的渲染加速，確保圖層正常 */
+    -webkit-backdrop-filter: blur(0px); 
+    z-index: 2;
 }
 
 /* --- Project 區塊：Mockup 展示 --- */
