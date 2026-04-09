@@ -99,53 +99,42 @@ code {
 }
 
 /* --- Home 區塊：Hero Overlay --- */
-/* 1. 強制修正圖片容器，防止 Safari 底部漏白 */
-.hero-wrapper {
-    display: flex !important;
-    flex-direction: column;
-    background-color: var(--mud-palette-background) !important;
-}
-
-.hero-image-container {
-    position: absolute;
-    inset: 0; /* 填滿整個父容器 */
-    z-index: 1;
-    overflow: hidden;
-}
-
-.hero-img {
+/* 1. 修正圖片下方縫隙 */
+.hero-img-safari {
     display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    /* 修正 Safari 可能出現的縮放邊界問題 */
-    transform: scale(1.01); 
+    /* 稍微放大一點點，蓋掉 Safari 的 1px 渲染誤差 */
+    transform: scale(1.01);
+    transform-origin: center;
 }
 
-/* 2. 重寫漸層層：使用 inset 陰影或強化漸層 */
-.hero-content-layer {
+.hero-text-overlay-safari {
     position: absolute;
-    inset: 0; /* 填滿，然後內容靠下 */
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 30px 20px;
+    /* 往下移 1px 蓋住可能出現的白線 */
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    padding: 60px 20px 30px 20px;
     
-    /* 這裡使用傳統語法並加入 Webkit 補丁 */
+    /* 關鍵修正：Safari 不喜歡 transparent 關鍵字 */
+    /* 我們改用 rgba，並直接填入你原本正常的那個淺色值 (250, 249, 246) */
     background: -webkit-linear-gradient(bottom, 
-        var(--mud-palette-background) 0%, 
-        rgba(255, 255, 255, 0) 40%);
+        rgba(250, 249, 246, 1) 0%, 
+        rgba(250, 249, 246, 0.6) 50%,
+        rgba(250, 249, 246, 0) 100%);
     background: linear-gradient(to top, 
-        var(--mud-palette-background) 0%, 
-        rgba(255, 255, 255, 0) 40%);
+        rgba(250, 249, 246, 1) 0%, 
+        rgba(250, 249, 246, 0.6) 50%,
+        rgba(250, 249, 246, 0) 100%);
+    
+    z-index: 2;
 }
 
-.hero-subtitle {
-    color: var(--mud-palette-text-primary) !important;
-    font-weight: 600 !important;
-    letter-spacing: 1px;
-    /* 確保文字不會因為漸層而模糊 */
-    text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+/* 如果切換到深色模式，我們透過 CSS 強制覆蓋這個漸層 */
+.mud-theme-dark .hero-text-overlay-safari {
+    background: linear-gradient(to top, 
+        #262624 0%, /* 這裡填入你深色模式的底色 */
+        rgba(38, 38, 36, 0.6) 50%,
+        rgba(38, 38, 36, 0) 100%) !important;
 }
 
 /* --- Project 區塊：Mockup 展示 --- */
