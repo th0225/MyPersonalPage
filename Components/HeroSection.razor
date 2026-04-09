@@ -1,14 +1,13 @@
-@* 增加內容層級的確保 *@
 <div id="home" class="mb-10">
-    <MudPaper Elevation="0" Class="section-container relative overflow-hidden" Style="height: 380px;">
-        @* 圖片層級設為 1 *@
-        <MudImage Src="images/img_1.JPG" Alt="My Life" ObjectFit="ObjectFit.Cover" 
-                  Class="w-100 h-100" Style="z-index: 1;" />
-        
-        @* 漸層層級設為 2 *@
-        <div class="hero-text-overlay" style="z-index: 2;">
-            <MudText Typo="Typo.subtitle2" 
-                    Style="color: var(--mud-palette-text-primary); font-weight: 600; letter-spacing: 1px;">
+    <MudPaper Elevation="0" Class="section-container relative overflow-hidden hero-wrapper" Style="height: 380px;">
+        @* 圖片層：強制填滿並取消底邊縫隙 *@
+        <div class="hero-image-container">
+            <MudImage Src="images/img_1.JPG" Alt="My Life" ObjectFit="ObjectFit.Cover" Class="w-100 h-100 hero-img" />
+        </div>
+
+        @* 漸層與文字層：改用 flex 置底 *@
+        <div class="hero-content-layer">
+            <MudText Typo="Typo.subtitle2" Class="hero-subtitle">
                 Code / Cycling / Coffee / Cats
             </MudText>
         </div>
