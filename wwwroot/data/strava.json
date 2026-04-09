@@ -1,14 +1,14 @@
 {
     "name": "Evening Ride",
-    "distance": 6.7,
-    "movingTime": 1354,
-    "elevation": 85,
-    "averageWatts": 79,
-    "weightedAverageWatts": 98,
-    "maxWatts": 459,
-    "kilojoules": 108,
+    "distance": 2.8,
+    "movingTime": 471,
+    "elevation": 8,
+    "averageWatts": 59,
+    "weightedAverageWatts": 73,
+    "maxWatts": 405,
+    "kilojoules": 29,
     "deviceName": "Garmin Edge 540",
-    "startDate": "2026-03-31T18:22:12Z",
+    "startDate": "2026-04-09T19:40:27Z",
     "sufferScore": 0,
-    "summaryPolyline": "mu_sC}t{~UB?KNYl@g@VIJABBNBFN@h@VP@ZJv@b@BDAJOh@@JDFnBdAxFnCxAx@`@\\n@n@^ZhBnBZTbAdAPJPEnBwBTEL@hBt@J@DCBMFa@BEHAdDzAFBTCD@rAb@H@PCNe@NKbCPz@@^DDCLAPD@A_@_AqAiEWq@qAsEe@mAi@gBc@kAEa@Ag@Dc@Pu@Zi@v@m@n@Yh@MzAQb@OTST[xAsCHW@Wo@yAU{@IcABiA`@}@F]DoGSmAo@qAI]?ORwCCSKUc@_@]k@?C?Ef@k@DMLuAT_BDKD?B@b@lCXfA^r@VTXNj@Jz@FvFFhFL\\DZJJHTTXl@Fd@Cd@K`@[r@gCfDa@n@Q^EP@b@JXr@dAJH@A?EQa@@CJA?MGRI@ADECg@eACUBSzA{Bb@g@nAeBTa@Jc@@o@CYI]IUOU]Wi@QcBMuB?qAI_@@uDEm@Eq@M]Sa@k@Sk@m@}CQg@IAABWzAQnBEJe@j@CFBPNXf@f@JR@d@ObC@\\JZj@fAH`@Hr@C~FG^_@`AEn@Ar@Lx@t@rB@DB?@TGTk@tA_AbBOLYNQD_ALq@Nq@Xw@b@[^S^Sv@C^Dt@Pv@f@xAfCrIhBlFJZAJEHGB_ACcCMW@IBORMb@I`@GBCE"
+    "summaryPolyline": "{g}rCst|~UCA?GBWLSz@iATe@?EEAC@s@`Ae@v@IZAN@NN\\bBpCN\\XxAf@~E^hAXf@zCfER\\HHBLIP_CjCaAbBeBnGMVqCzB]DcAFo@L]P]b@MZIZMpBIr@U?o@K{BIyDWeEKoAMM@KDMRM^EDG@g@KkAo@iCeBwDcBUOm@o@YUaBw@s@e@qAo@e@YwCeCcAi@eAw@g@OqBaBGEUEQIU[{@m@MCG@SLU`@KZAN"
 }
