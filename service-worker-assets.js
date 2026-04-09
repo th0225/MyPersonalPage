@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "DbPiBDa3",
+  "version": "5wKDwWtv",
   "assets": [
     {
       "hash": "sha256-kBmVfU2BqUZUT8HPz7NUnkObDjxYKbSWXF5q33paHM0=",
@@ -82,8 +82,8 @@ self.assetsManifest = {
       "url": "_framework/MudBlazor.0453d02pep.wasm"
     },
     {
-      "hash": "sha256-oKH+aVdzFeivnn3DlXJRKmC2AwxHX6uBl0sP1FrAGS8=",
-      "url": "_framework/MyPersonalPage.8mkg6jez0j.wasm"
+      "hash": "sha256-d5+ZWmbqWa9RwWTEDPh3TDuYynGMRvTxP9g3KbbQw8o=",
+      "url": "_framework/MyPersonalPage.zl6k9mkleh.wasm"
     },
     {
       "hash": "sha256-xgRYkHujjsiKwdDsl4zGSEud9Qr6CXlIks2Qjz27AFE=",
@@ -174,8 +174,8 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.66stpp682q.js"
     },
     {
-      "hash": "sha256-ENcv1Uutlh9wntrImTqYgtmPZxP3nebW/kkdsVofU3g=",
-      "url": "_framework/dotnet.083zwf6vj7.js"
+      "hash": "sha256-x8NRxpO4LJmoeAMUEuLLnBOkckTz2lkQmm/mELfYScQ=",
+      "url": "_framework/dotnet.l5nw7idxuf.js"
     },
     {
       "hash": "sha256-Ebk+Km0uqtdo/srKe0YcuUOlFykCcKVkBt03gTWt0aU=",
@@ -206,7 +206,7 @@ self.assetsManifest = {
       "url": "apple-touch-icon.png"
     },
     {
-      "hash": "sha256-ltilJ/YZ4iUsXWYuP3L4nGzcwbwIKo3MOSsWgw+iaRQ=",
+      "hash": "sha256-oIh3qgNeArimPdClC0svAe67BjOvyG4YXj9vEHTif8M=",
       "url": "css/app.css"
     },
     {
@@ -254,7 +254,7 @@ self.assetsManifest = {
       "url": "images/img_3.JPG"
     },
     {
-      "hash": "sha256-r3nHXYDmz2BMgkAiRN5UNuBs0kTe7TOcaYSCVETcUUg=",
+      "hash": "sha256-4qQubjHWpqmoY7i6udO30FEImqY7HggRrc6hwImhx44=",
       "url": "index.html"
     },
     {
