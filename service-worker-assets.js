@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "o5W2/ww9",
+  "version": "buYT06O4",
   "assets": [
     {
       "hash": "sha256-kBmVfU2BqUZUT8HPz7NUnkObDjxYKbSWXF5q33paHM0=",
@@ -82,8 +82,8 @@ self.assetsManifest = {
       "url": "_framework/MudBlazor.0453d02pep.wasm"
     },
     {
-      "hash": "sha256-MuSAh6jhAwH30f8iAu7xuzrKSac376Xhh4q5CGB8Zkw=",
-      "url": "_framework/MyPersonalPage.atvn3egpzh.wasm"
+      "hash": "sha256-T6m/QHWC6vA7TxBPjUcJZdysiNQ/yBvTETgZDTjywek=",
+      "url": "_framework/MyPersonalPage.bpso20kaj3.wasm"
     },
     {
       "hash": "sha256-xgRYkHujjsiKwdDsl4zGSEud9Qr6CXlIks2Qjz27AFE=",
@@ -174,8 +174,8 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.66stpp682q.js"
     },
     {
-      "hash": "sha256-vu6jRPUhAaHu9Q4I0m+2etkCTmND8zroYenF1ysNw0I=",
-      "url": "_framework/dotnet.e1hkq5bllu.js"
+      "hash": "sha256-mM5gfF9cD3AzsyvviyFhk/LyqLSPCuCG141YZQQX9Ec=",
+      "url": "_framework/dotnet.gygro2m2xe.js"
     },
     {
       "hash": "sha256-Ebk+Km0uqtdo/srKe0YcuUOlFykCcKVkBt03gTWt0aU=",
@@ -202,6 +202,10 @@ self.assetsManifest = {
       "url": "_framework/icudt_no_CJK.lfu7j35m59.dat"
     },
     {
+      "hash": "sha256-8nGPHDsvt8yp37XXmbgkAWUa8BIo3ebynIaSA1meLAE=",
+      "url": "apple-touch-icon.png"
+    },
+    {
       "hash": "sha256-ltilJ/YZ4iUsXWYuP3L4nGzcwbwIKo3MOSsWgw+iaRQ=",
       "url": "css/app.css"
     },
@@ -210,12 +214,24 @@ self.assetsManifest = {
       "url": "data/strava.json"
     },
     {
-      "hash": "sha256-DbpQaq68ZSb5IoPosBErM1QWBfsbTxpJqhU0REi6wP4=",
-      "url": "icon-192.png"
+      "hash": "sha256-e9Hx68njH8YHYN6ncp4gU2CBGVkW99rMndGo650CN/Y=",
+      "url": "favicon-96x96.png"
     },
     {
-      "hash": "sha256-oEo6d+KqX5fjxTiZk/w9NB3Mi0+ycS5yLwCKwr4IkbA=",
-      "url": "icon-512.png"
+      "hash": "sha256-gNpZbsHnZSFqD/qDxGAxO2G2oDyb0yiO2MhuttG1V6c=",
+      "url": "favicon.ico"
+    },
+    {
+      "hash": "sha256-V6xGX8RiCIbvRSNTuTNtP27Dk5+LQtMAkFhhszYttSk=",
+      "url": "favicon.svg"
+    },
+    {
+      "hash": "sha256-jthHQHvejTZlQUhg5U0rhTnmV4QR+JOuqr4oEZMhAK0=",
+      "url": "icon-192x192.png"
+    },
+    {
+      "hash": "sha256-PTvCUoYz9iMNQXeUsgkaugnSeIQwZ3iZUpsV8TUrOs4=",
+      "url": "icon-512x512.png"
     },
     {
       "hash": "sha256-dKbiUn9weJLLcm0TGJhV9J3VDPoJl4Yns7am54kwCxc=",
@@ -238,12 +254,16 @@ self.assetsManifest = {
       "url": "images/img_3.JPG"
     },
     {
-      "hash": "sha256-pnZcmAveGnyx75dYUqIn7+FRGfUQkUQP+kdsnNIvFAs=",
+      "hash": "sha256-+NHVPLLQnWpdUrdncTTXReZCFHNX+ha4os/Gk78WBms=",
       "url": "index.html"
     },
     {
-      "hash": "sha256-bJcvLqJSrhdt+oaudcvgeSfCw39LP/A/nwvQ3vDNjX8=",
+      "hash": "sha256-T5GsJMDV8oOf6g9nI4hvci/1qnAwuWFIjvHiRdnoklA=",
       "url": "manifest.webmanifest"
+    },
+    {
+      "hash": "sha256-kaeNT+FjFt+T7JGzOhXH7YSqsrDeiplZ2kDxCN/CFU4=",
+      "url": "site.webmanifest"
     }
   ]
 };
