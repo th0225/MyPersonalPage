@@ -1,14 +1,14 @@
 {
-    "name": "Evening Ride",
-    "distance": 2.8,
-    "movingTime": 471,
-    "elevation": 8,
-    "averageWatts": 59,
-    "weightedAverageWatts": 73,
-    "maxWatts": 405,
-    "kilojoules": 29,
+    "name": "Morning Ride",
+    "distance": 36.8,
+    "movingTime": 5672,
+    "elevation": 430,
+    "averageWatts": 121,
+    "weightedAverageWatts": 146,
+    "maxWatts": 508,
+    "kilojoules": 694,
     "deviceName": "Garmin Edge 540",
-    "startDate": "2026-04-09T19:40:27Z",
+    "startDate": "2026-04-11T06:39:17Z",
     "sufferScore": 0,
-    "summaryPolyline": "{g}rCst|~UCA?GBWLSz@iATe@?EEAC@s@`Ae@v@IZAN@NN\\bBpCN\\XxAf@~E^hAXf@zCfER\\HHBLIP_CjCaAbBeBnGMVqCzB]DcAFo@L]P]b@MZIZMpBIr@U?o@K{BIyDWeEKoAMM@KDMRM^EDG@g@KkAo@iCeBwDcBUOm@o@YUaBw@s@e@qAo@e@YwCeCcAi@eAw@g@OqBaBGEUEQIU[{@m@MCG@SLU`@KZAN"
+    "summaryPolyline": "wu_sCks{~Uo@\\I\\bD`BM|@DTdLnFzAjAbGdGd@ExByBfCz@^y@dDvAh@B|Af@PC`@s@~EHNM?QeBcFaCiI_AeCO{@EoAHo@Vm@jAmAdEy@p@e@dAgBf@aB_AcCUgBHaAf@wADgGSqAy@gBRcE{@}@Ug@l@aAj@kEDg@UgBDc@R_@pDcDb@uALoBO[_@S{KoAcB_@Ym@F_A|CsBRo@Km@[WyF}AmAk@}AyBaCoE_Aw@qBiAm@w@yBmH?s@Vq@z@W`EAvC{@xFcAt@c@Hq@]i@yDaC_BwA}EmC}@_AgJmVmAkC]S_FUmf@wRkCmAsF{FuFuB}GaDsQkHiG}CuDkAgg@eS}MyFcEsBeG{B}O{GwAMo]dAsA?i@Ks@g@e_@}^m@eAS{Da@uRr@iL?kBg@iCe@_D?w@`@_CGq@w@uDCm@jAyD~AkC@cAUoCLm@b@SrBV~@EdA]lA}@fAdAn@X|AEvAJtAMhG`Fbd@lK|Zy@Ra@KyB?qQEcBq@iJ?aAPoA`JqTlGsMdBaBXJlAlAd@Bl@m@rCoBIEQFuBxAm@p@_@AmAmA]K]JiApAkGnMkJtTYxBx@vMCbFBzKNbBANSPkZt@kd@mKmFmEa@QiAJcBGmAD_@KoAeAYKcB|@s@RkA?{AUq@\\Mz@RrCE|@cBxC{@dCGf@z@vFAr@YfB?x@^lCd@pBHz@ArAo@tIChCp@zVNh@Z`@lQ~PfMpMr@d@|BHj]cAzAHnPbHvFrBxOfHl[`MlP|GLNmEzZq@bDa@zDSj@@`AXrB?~@m@jNq@zDLrBa@xHc@hN@nDPhCeApE]xBmApCOn@?p@j@pDrAzA~@xAfBlFCX[n@{@v@WdAVw@p@o@b@w@Fm@iBeGeAoAo@a@W[q@yE\\uA|@mBpBqJY_CDuGViEf@kNMkBl@yDn@eO]_FPi@X}C|@eE|BgOjAqJNAtC`AlEvBnRxHxNlGa@fEEbBSx@m@jEc@hHaAxD_BfHqClJsFxNeArEeA~CsIfTcFvIc@jAMp@LnAn@lB`G~J~JzUrAfBH^EL[DmKgCyIkDcCwAi@BE\\RXxDpBhItFBPKx@k@pCZR`Dz@NT{@jECn@JPhBz@hHxBfGnCt@d@HAx@wBTUvKGbBV~IxEh@r@Z|Ax@RfExBbCbDnBpBbFfCJAR[Z?lIvDFLs@dDO@"
 }
