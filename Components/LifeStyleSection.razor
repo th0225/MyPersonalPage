@@ -169,6 +169,8 @@
             _latestActivity = await Http.GetFromJsonAsync<StravaActivity>(
                 "data/strava.json"
             );
+
+            StateHasChanged();
         }
         catch (Exception ex)
         {
