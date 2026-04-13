@@ -6,7 +6,10 @@ public class StravaActivity
     public double Distance { get; set; }
     // 移動時間
     public int MovingTime { get; set; }
-    public string DisplayTime => $"{MovingTime / 60}m {MovingTime % 60}s";
+    public string DisplayTime => 
+        TimeSpan.FromSeconds(MovingTime) is var t && t.TotalHours >= 1 
+        ? $"{(int)t.TotalHours}h {t.Minutes}m {t.Seconds}s" 
+        : $"{t.Minutes}m {t.Seconds}s";
     // 爬升高度
     public double Elevation { get; set; }
     // 平均功率
