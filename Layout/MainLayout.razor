@@ -85,7 +85,13 @@
         ? "background-color: #1A1A19;" 
         : "background-color: #FAF9F6;";
 
-    private void DarkModeToggle() => _isDarkMode = !_isDarkMode;
+    private async Task DarkModeToggle() 
+    {
+        _isDarkMode = !_isDarkMode;
+
+        await JS.InvokeVoidAsync("localStorage.setItem",
+            "darkMode", _isDarkMode);
+    }
 
     private MudTheme CustomTheme = new MudTheme()
     {
@@ -133,6 +139,10 @@
     {
         if (firstRender)
         {
+            var result = await JS.InvokeAsync<string>(
+                "localStorage.getItem",
+                "darkMode");
+            _isDarkMode = (result == "true");
             StateHasChanged();
         }
     }

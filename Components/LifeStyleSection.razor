@@ -166,11 +166,12 @@
 
         try
         {
+            var cacheBuster = DateTime.Now.Ticks;
             _latestActivity = await Http.GetFromJsonAsync<StravaActivity>(
-                "data/strava.json"
+                $"data/strava.json?={cacheBuster}"
             );
 
-            StateHasChanged();
+            await InvokeAsync(StateHasChanged);
         }
         catch (Exception ex)
         {
