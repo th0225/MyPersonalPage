@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "szOF0NIa",
+  "version": "gZSoZYQg",
   "assets": [
     {
       "hash": "sha256-kBmVfU2BqUZUT8HPz7NUnkObDjxYKbSWXF5q33paHM0=",
@@ -82,8 +82,8 @@ self.assetsManifest = {
       "url": "_framework/MudBlazor.0453d02pep.wasm"
     },
     {
-      "hash": "sha256-xuq6b3JzYNlTMRaSX/gEEPcUq4+gikFugSvIXa51X0E=",
-      "url": "_framework/MyPersonalPage.y53vlh7pwi.wasm"
+      "hash": "sha256-VXgVoYBTGqsTyaqsJDzwiVeMNLIWPIlKqmBjTwCk0hE=",
+      "url": "_framework/MyPersonalPage.1tsm91v0dl.wasm"
     },
     {
       "hash": "sha256-X1KaolRJ0plk11mDo3+WMJl4/SiazPg7GIi15+yqJKs=",
@@ -174,8 +174,8 @@ self.assetsManifest = {
       "url": "_framework/blazor.webassembly.66stpp682q.js"
     },
     {
-      "hash": "sha256-dC9+cesO/jlX0t9+oNcOpRByFxc2aafpmIviRneEr8w=",
-      "url": "_framework/dotnet.8nf1yigdku.js"
+      "hash": "sha256-jQkU4YTkHp13kLzrZ4QcebMqUm4b2NWQN0PTbSbU/PY=",
+      "url": "_framework/dotnet.hzhq0jclrz.js"
     },
     {
       "hash": "sha256-5WJWKyRAy1ynOGugXKh/YchOnzSV97RMlyJnLcgr7m8=",
@@ -206,7 +206,7 @@ self.assetsManifest = {
       "url": "apple-touch-icon.png"
     },
     {
-      "hash": "sha256-1Z2WW5Kevnk8bdI4A47E1LGIhy1HXpFp5nc/QrxaRMQ=",
+      "hash": "sha256-GE1T/I/iIepfMlDPSLRoWs9Vmo0MmcYooAHWY4n3K4w=",
       "url": "css/app.css"
     },
     {
@@ -242,19 +242,19 @@ self.assetsManifest = {
       "url": "images/bento-mobile.png"
     },
     {
+      "hash": "sha256-gjcNegS4k1tvxTej2SH+f2p3lQR8BOKTSvCou5F1Dfw=",
+      "url": "images/catch-desktop.jpeg"
+    },
+    {
+      "hash": "sha256-/66MrA/dtWcITIe7xFeLiwzWuHB9qEninQ+3Kyu23pc=",
+      "url": "images/catch-mobile.jpeg"
+    },
+    {
       "hash": "sha256-/5Z1gXvbKgOzMjpgw248sFU3aCUBTOTfjgBMeYnBLdM=",
       "url": "images/img_1.JPG"
     },
     {
-      "hash": "sha256-DCSoLauid/XwA3OftHmF7hsOW4f+svkTyy5rTtiaYXE=",
-      "url": "images/img_2.JPG"
-    },
-    {
-      "hash": "sha256-707qekIG98i7AmMWmciwJwdaP9DJpq16hcY2/hL3NnU=",
-      "url": "images/img_3.JPG"
-    },
-    {
-      "hash": "sha256-F8ms5MvIF+jyeBY+9Ke9d8UOv/o27ZxLaU7/vMWPyCM=",
+      "hash": "sha256-lYWo7JxR1U6Z1/AZxEfAXc1JLNoAHkGvb1yN6GuxRmg=",
       "url": "index.html"
     },
     {
