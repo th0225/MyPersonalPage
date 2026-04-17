@@ -1,7 +1,8 @@
 <div id="projects" class="py-12 ">
     <div class="d-flex align-center mb-8">
-        <MudText Typo="Typo.h5" Color="Color.Primary"
-            Style="font-weight: 800; letter-spacing: 1px;">
+        <MudText Typo="Typo.h5"
+                 Color="Color.Primary"
+                 Style="font-weight: 800; letter-spacing: 1px;">
             Project
         </MudText>
         <MudDivider Class="ml-4 flex-grow-1 section-divider" />
@@ -15,18 +16,26 @@
             <MudItem xs="12" md="6"
                 Class="d-flex flex-column justify-center mb-12">
                 
-                <MudStack Row="true" AlignItems="AlignItems.Center" Class="mb-4">
-                    <MudAvatar Style="background-color: var(--mud-palette-divider);" Size="Size.Small">
+                <MudStack Row="true"
+                          AlignItems="AlignItems.Center"
+                          Class="mb-4">
+                    <MudAvatar Style="background-color: var(--mud-palette-divider);"
+                               Size="Size.Small">
                         <MudIcon Icon="@Icons.Material.Filled.RestaurantMenu"
-                            Color="Color.Primary" Size="Size.Small" />
+                                 Color="Color.Primary"
+                                 Size="Size.Small" />
                     </MudAvatar>
                     <MudText Typo="Typo.body1"
-                        Style="font-weight: 800; color: var(--mud-palette-text-primary);">
+                             Style="font-weight: 800;
+                                    color: var(--mud-palette-text-primary);">
                         Bento Order System
                     </MudText>
                 </MudStack>
 
-                <MudText Typo="Typo.body2" Style="color: var(--mud-palette-text-secondary); line-height: 1.8;" Class="mb-5">
+                <MudText Typo="Typo.body2"
+                         Style="color: var(--mud-palette-text-secondary);
+                                line-height: 1.8;"
+                        Class="mb-5">
                     <b>餐點訂購自動化方案</b>：整合 Blazor Server 與 Line Bot 實現在線點餐與自動下單。
                     <br />
                     <span style="font-size: 0.8rem;">
@@ -37,28 +46,38 @@
                 </MudText>
 
                 <div class="d-flex gap-2 mb-6">
-                    <MudChip T="string" Size="Size.Small" Variant="Variant.Text"
-                        Style="background: var(--mud-palette-divider); color: var(--mud-palette-primary); font-weight: 600;">
-                            In Progress
+                    <MudChip T="string"
+                             Size="Size.Small"
+                             Variant="Variant.Filled"
+                             Style="background: var(--mud-palette-divider);
+                                    color: var(--mud-palette-primary);
+                                    font-weight: 600;">
+                            Completed
                     </MudChip>
-                    <MudChip T="string" Size="Size.Small" Variant="Variant.Text" 
-                        Style="background: var(--mud-palette-divider); color: var(--mud-palette-primary); font-weight: 600;">
+                    <MudChip T="string"
+                             Size="Size.Small"
+                             Variant="Variant.Text" 
+                             Style="background: var(--mud-palette-divider);
+                                    color: var(--mud-palette-primary);
+                                    font-weight: 600;">
                         .NET 10
                     </MudChip>
                 </div>
                 
                 <div class="d-flex gap-3 mt-auto">
                     <MudButton Variant="Variant.Text"
-                        StartIcon="@Icons.Custom.Brands.GitHub"
-                        Color="Color.Primary"
-                        Style="font-weight: 700;"
-                        Target="_blank"
-                        Href="https://github.com/th0225/bento-order">
+                               StartIcon="@Icons.Custom.Brands.GitHub"
+                               Color="Color.Primary"
+                               Style="font-weight: 700;"
+                               Target="_blank"
+                               Href="https://github.com/th0225/bento-order">
                         CODE
                     </MudButton>
-                    <MudButton Variant="Variant.Filled" Disabled
-                        Color="Color.Primary"
-                        Style="border-radius: 12px; font-weight: 700;">
+                    <MudButton Variant="Variant.Filled"
+                               Disabled
+                               Color="Color.Primary"
+                               Style="border-radius: 12px;
+                                      font-weight: 700;">
                         LIVE DEMO
                     </MudButton>
                 </div>
@@ -75,4 +94,101 @@
             </MudItem>
         </MudGrid>
     </MudPaper>
+
+    <MudPaper Class="pa-8 mt-6" Elevation="0"
+        Style="background-color: var(--mud-palette-surface);
+            border: 1.5px solid var(--mud-palette-divider);
+            border-radius: 28px; overflow: hidden;">
+        <MudGrid Spacing="4">
+            <MudItem xs="12" md="6"
+                Class="d-flex flex-column justify-center mb-12">
+                
+                <MudStack Row="true"
+                          AlignItems="AlignItems.Center"
+                          Class="mb-4">
+                    <MudAvatar Style="background-color: var(--mud-palette-divider);"
+                               Size="Size.Small">
+                        <MudIcon Icon="@Icons.Material.Filled.Radar"
+                                 Color="Color.Primary"
+                                 Size="Size.Small" />
+                    </MudAvatar>
+                    <MudText Typo="Typo.body1"
+                             Style="font-weight: 800;
+                                    color: var(--mud-palette-text-primary);">
+                        Auto Catch
+                    </MudText>
+                </MudStack>
+
+                <MudText Typo="Typo.body2"
+                         Style="color: var(--mud-palette-text-secondary);
+                                line-height: 1.8;"
+                        Class="mb-5">
+                    <b>PTT 趨勢即時雷達</b>：基於 Playwright 與 Blazor 的多看板監控系統。
+                    <br />
+                    <span style="font-size: 0.8rem; color: #8D7B68;">
+                        • <b>並行監控</b>：支援 3 組看板同步抓取，自定義推文門檻與回文過濾。<br />
+                        • <b>性能優化</b>：實作全域單例服務與快取機制，大幅提升頁面導航流暢度。<br />
+                        • <b>精確控制</b>：整合 CancellationToken 實現非同步任務即時中止，節省資源。
+                    </span>
+                </MudText>
+
+                <div class="d-flex gap-2 mb-6">
+                    <MudChip T="string"
+                             Size="Size.Small"
+                             Variant="Variant.Outlined"
+                             Style="background: var(--mud-palette-divider);
+                                    color: var(--mud-palette-primary);
+                                    font-weight: 600;">
+                            In Progress
+                    </MudChip>
+                    <MudChip T="string"
+                             Size="Size.Small"
+                             Variant="Variant.Text" 
+                             Style="background: var(--mud-palette-divider);
+                                    color: var(--mud-palette-primary);
+                                    font-weight: 600;">
+                        .NET 10
+                    </MudChip>
+                </div>
+                
+                <div class="d-flex gap-3 mt-auto mb-6">
+                    <MudButton Variant="Variant.Text"
+                               StartIcon="@Icons.Custom.Brands.GitHub"
+                               Color="Color.Primary"
+                               Style="font-weight: 700;"
+                               Target="_blank"
+                               Href="https://github.com/th0225/Auto-Catch">
+                        CODE
+                    </MudButton>
+                    <MudButton Variant="Variant.Filled"
+                               Disabled
+                               Color="Color.Primary"
+                               Style="border-radius: 12px;
+                                      font-weight: 700;">
+                        LIVE DEMO
+                    </MudButton>
+                </div>
+            </MudItem>
+
+            <MudItem xs="12" md="6" Class="mockup-container">
+                <MudImage Src="images/catch-desktop.jpeg" 
+                          Alt="Desktop Preview"
+                          Class="mockup-desktop" />
+                
+                <MudImage Src="images/catch-mobile.jpeg" 
+                          Alt="Mobile Preview"
+                          Class="mockup-mobile" />
+            </MudItem>
+        </MudGrid>
+    </MudPaper>
 </div>
+
+@code {
+    // 簡單的 Helper 邏輯，確保在手機版時文字依然在圖片上方
+    private string GetOrderStyle(int type) {
+        // type 1 為圖片, type 2 為文字
+        // 在寬螢幕時，第二個專案希望圖片在左(order 1)，文字在右(order 2)
+        // 這邊建議直接手動在 MudItem 調整 order 屬性即可
+        return "";
+    }
+}
