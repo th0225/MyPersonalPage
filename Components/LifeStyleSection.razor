@@ -2,9 +2,13 @@
 
 @inject HttpClient Http
 
-<div id="lifestyle" class="py-12 section-container" style="background-color: transparent;">
+<div id="lifestyle"
+     class="py-12 section-container"
+     style="background-color: transparent;">
     <div class="d-flex align-center mb-8">
-        <MudText Typo="Typo.h5" Color="Color.Primary" Style="font-weight: 800; letter-spacing: 1px;">
+        <MudText Typo="Typo.h5"
+                 Color="Color.Primary"
+                 Style="font-weight: 800; letter-spacing: 1px;">
             Lifestyle
         </MudText>
         <MudDivider Class="ml-4 flex-grow-1 section-divider" />
@@ -13,20 +17,27 @@
     <MudGrid Spacing="4">
         @* --- 單車數據看板 --- *@
         <MudItem xs="12" md="12">
-            <MudPaper Elevation="0" Class="pa-6"
-                Style="background: var(--mud-palette-surface); border-radius: 24px;
-                    border: 1px solid var(--mud-palette-divider);">
+            <MudPaper Elevation="0"
+                      Class="pa-6"
+                      Style="background: var(--mud-palette-surface);
+                             border-radius: 24px;
+                             border: 1px solid var(--mud-palette-divider);">
                 <div class="d-flex align-center mb-4">
                     <MudIcon Icon="@Icons.Material.Rounded.DirectionsBike"
                         Color="Color.Primary" Class="mr-2" />
-                    <MudText Typo="Typo.h6" Style="color: var(--mud-palette-text-primary); font-weight: 800;">
+                    <MudText Typo="Typo.h6"
+                             Style="color: var(--mud-palette-text-primary);
+                                    font-weight: 800;">
                         最新騎乘訓練
                     </MudText>
                     <MudSpacer />
                     @if (_latestActivity != null)
                     {
-                        <MudChip T="string" Size="Size.Small" Variant="Variant.Text" 
-                            Style="color: var(--mud-palette-primary); background: var(--mud-palette-divider);">
+                        <MudChip T="string"
+                                 Size="Size.Small"
+                                 Variant="Variant.Text" 
+                                 Style="color: var(--mud-palette-primary);
+                                        background: var(--mud-palette-divider);">
                             @_latestActivity.Name
                         </MudChip>
                     }
@@ -34,15 +45,19 @@
 
                 @if (_latestActivity == null)
                 {
-                    <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-7" />
+                    <MudProgressLinear Color="Color.Primary"
+                                       Indeterminate="true"
+                                       Class="my-7" />
                 }
                 else
                 {
                     <MudGrid Spacing="2">
                         <MudItem xs="6" sm="3">
                             <div class="stat-card">
-                                <MudText Typo="Typo.caption" Style="color: var(--mud-palette-text-secondary);">距離</MudText>
-                                <MudText Typo="Typo.h5" Style="font-weight: 900; color: var(--mud-palette-text-primary);">
+                                <MudText Typo="Typo.caption"
+                                         Style="color: var(--mud-palette-text-secondary);">距離</MudText>
+                                <MudText Typo="Typo.h5"
+                                         Style="font-weight: 900; color: var(--mud-palette-text-primary);">
                                     @_latestActivity.Distance <span class="unit-text">km</span>
                                 </MudText>
                             </div>
@@ -50,8 +65,10 @@
 
                         <MudItem xs="6" sm="3">
                             <div class="stat-card">
-                                <MudText Typo="Typo.caption" Style="color: var(--mud-palette-text-secondary);">爬升</MudText>
-                                <MudText Typo="Typo.h5" Style="font-weight: 900; color: var(--mud-palette-text-primary);">
+                                <MudText Typo="Typo.caption"
+                                         Style="color: var(--mud-palette-text-secondary);">爬升</MudText>
+                                <MudText Typo="Typo.h5"
+                                         Style="font-weight: 900; color: var(--mud-palette-text-primary);">
                                     @_latestActivity.Elevation <span class="unit-text">m</span>
                                 </MudText>
                             </div>
@@ -59,8 +76,10 @@
 
                         <MudItem xs="6" sm="3">
                             <div class="stat-card">
-                                <MudText Typo="Typo.caption" Style="color: var(--mud-palette-text-secondary);">平均功率</MudText>
-                                <MudText Typo="Typo.h5" Style="font-weight: 900; color: var(--mud-palette-text-primary);">
+                                <MudText Typo="Typo.caption"
+                                         Style="color: var(--mud-palette-text-secondary);">平均功率</MudText>
+                                <MudText Typo="Typo.h5"
+                                         Style="font-weight: 900; color: var(--mud-palette-text-primary);">
                                     @_latestActivity.AverageWatts <span class="unit-text">W</span>
                                 </MudText>
                             </div>
@@ -68,8 +87,10 @@
 
                         <MudItem xs="6" sm="3">
                             <div class="stat-card">
-                                <MudText Typo="Typo.caption" Style="color: var(--mud-palette-text-secondary);">耗時</MudText>
-                                <MudText Typo="Typo.h6" Style="font-weight: 900; color: var(--mud-palette-text-primary); margin-top: 4px;">
+                                <MudText Typo="Typo.caption"
+                                         Style="color: var(--mud-palette-text-secondary);">耗時</MudText>
+                                <MudText Typo="Typo.h6"
+                                         Style="font-weight: 900; color: var(--mud-palette-text-primary); margin-top: 4px;">
                                     @_latestActivity.DisplayTime
                                 </MudText>
                             </div>
@@ -77,14 +98,20 @@
                     </MudGrid>
 
                     <div class="d-flex align-center mt-4 pt-4"
-                        style="border-top: 1px dashed var(--mud-palette-divider);">
-                        <MudIcon Icon="@Icons.Material.Rounded.Bolt" Size="Size.Small" Style="color: #FACC15;" />
-                        <MudText Typo="Typo.caption" Class="ml-1" Style="color: var(--mud-palette-text-secondary);">
+                         style="border-top: 1px dashed var(--mud-palette-divider);">
+                        <MudIcon Icon="@Icons.Material.Rounded.Bolt"
+                                 Size="Size.Small"
+                                 Style="color: #FACC15;" />
+                        <MudText Typo="Typo.caption"
+                                 Class="ml-1"
+                                 Style="color: var(--mud-palette-text-secondary);">
                             最高功率: @_latestActivity.MaxWatts W | FTP: 210W
                         </MudText>
                         <MudSpacer />
                         <MudLink href="https://www.strava.com/athletes/25929657" Target="_blank" Underline="Underline.None">
-                            <MudText Typo="Typo.caption" Style="color: var(--mud-palette-primary); font-weight: 700;">
+                            <MudText Typo="Typo.caption"
+                                     Style="color: var(--mud-palette-primary);
+                                            font-weight: 700;">
                                 VIEW ON STRAVA
                             </MudText>
                         </MudLink>
@@ -95,15 +122,23 @@
 
         @* --- 咖啡看板 --- *@
         <MudItem xs="12" md="12">
-            <MudPaper Elevation="0" Class="pa-5"
-                Style="background: var(--mud-palette-surface); border-radius: 20px; border: 1px solid var(--mud-palette-divider);">
+            <MudPaper Elevation="0"
+                      Class="pa-5"
+                      Style="background: var(--mud-palette-surface);
+                             border-radius: 20px;
+                             border: 1px solid var(--mud-palette-divider);">
                 <div class="d-flex align-center">
-                    <MudIcon Icon="@Icons.Material.Filled.LocalCafe" Class="mr-3" Color="Color.Primary" />
+                    <MudIcon Icon="@Icons.Material.Filled.LocalCafe"
+                             Class="mr-3"
+                             Color="Color.Primary" />
                     <div>
-                        <MudText Typo="Typo.body1" Style="font-weight: 700; color: var(--mud-palette-text-primary);">
+                        <MudText Typo="Typo.body1"
+                                 Style="font-weight: 700;
+                                        color: var(--mud-palette-text-primary);">
                                 今日咖啡配方
                         </MudText>
-                        <MudText Typo="Typo.body2" Style="color: var(--mud-palette-text-secondary);">
+                        <MudText Typo="Typo.body2"
+                                 Style="color: var(--mud-palette-text-secondary);">
                             衣索比亞 古吉 鳥拉嘎 日曬 / 93°C / 手沖
                         </MudText>
                     </div>
@@ -113,24 +148,33 @@
 
         @* --- 貓咪互動看板 --- *@
         <MudItem xs="12" md="12">
-            <MudPaper Elevation="0" Class="pa-5 relative overflow-hidden" 
-                    Style="background: var(--mud-palette-divider); border-radius: 20px; cursor: pointer;" 
+            <MudPaper Elevation="0"
+                      Class="pa-5 relative overflow-hidden" 
+                      Style="background: var(--mud-palette-divider);
+                             border-radius: 20px; cursor: pointer;" 
                     @onclick="InteractWithCat">
                 <div class="d-flex align-center">
                     <MudAvatar Style="background-color: var(--mud-palette-surface);" Class="mr-3">
-                        <MudIcon Icon="@_currentCatIcon" Size="Size.Small" Color="Color.Primary" />
+                        <MudIcon Icon="@_currentCatIcon"
+                                 Size="Size.Small"
+                                 Color="Color.Primary" />
                     </MudAvatar>
                     <div>
-                        <MudText Typo="Typo.body1" Style="font-weight: 700; color: var(--mud-palette-text-primary);">
+                        <MudText Typo="Typo.body1"
+                                 Style="font-weight: 700;
+                                        color: var(--mud-palette-text-primary);">
                                 My Boss
                         </MudText>
-                        <MudText Typo="Typo.caption" Style="color: var(--mud-palette-text-secondary);">
+                        <MudText Typo="Typo.caption"
+                                 Style="color: var(--mud-palette-text-secondary);">
                             @_catStatus
                         </MudText>
                     </div>
                 </div>
                 <MudText Typo="Typo.caption"
-                    Style="position:absolute; bottom:4px; right:12px; opacity:0.3; font-size: 10px; color: var(--mud-palette-text-primary);">
+                    Style="position:absolute; bottom:4px; right:12px;
+                           opacity:0.3; font-size: 10px;
+                           color: var(--mud-palette-text-primary);">
                     (點擊主子進行互動)
                 </MudText>
             </MudPaper>
@@ -166,9 +210,9 @@
 
         try
         {
-            var cacheBuster = DateTime.Now.Ticks;
+            var cacheBuster = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
             _latestActivity = await Http.GetFromJsonAsync<StravaActivity>(
-                $"data/strava.json?={cacheBuster}"
+                $"data/strava.json?v={cacheBuster}"
             );
 
             await InvokeAsync(StateHasChanged);
