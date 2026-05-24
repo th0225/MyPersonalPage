@@ -1,14 +1,14 @@
 {
-    "name": "Evening Ride",
-    "distance": 23.6,
-    "movingTime": 4757,
-    "elevation": 251,
-    "averageWatts": 74,
-    "weightedAverageWatts": 78,
-    "maxWatts": 243,
-    "kilojoules": 352,
+    "name": "Morning Ride",
+    "distance": 81.1,
+    "movingTime": 13529,
+    "elevation": 550,
+    "averageWatts": 88,
+    "weightedAverageWatts": 92,
+    "maxWatts": 385,
+    "kilojoules": 1197,
     "deviceName": "Garmin Edge 540",
-    "startDate": "2026-05-21T18:14:49Z",
+    "startDate": "2026-05-24T06:07:14Z",
     "sufferScore": 0,
-    "summaryPolyline": "av_sCaw{~UP\\IL?lASL_@LGLANFFzAd@t@h@HP?HOh@?HBFbA`@`CpAvAh@vC~AfAx@hAfA`@f@tAvAlAdAP?NGbBiBTMvA\\j@XJELk@DEbDtARFNATDjA`@XGDIH[FGJC`BFp@HrA@XHc@mAkG_S]mAEe@Ag@Lu@H[V_@XW|@g@hA]zAW^QTW~@{An@yA@OCOc@}@W{@Mw@CWBmAH[Zs@BUFkDCiBQiAo@eAK_@?SN_B?_@DY?MGQYS[]Uc@BG^c@JWL}AT}ALc@AYQwA?e@Ta@tCcCj@u@Nc@Hk@H}@?a@MYMMi@OqLsAk@MUOKSEYAUF[^a@jBcAXYJYBSASGQKOUKyGiBYO[YsAsB_ByCm@_Ai@e@qBcAYUQYw@wB{@qCMk@G_@De@H[RURITEfAAz@BjACbDaA`GeA\\UJU@YI[m@i@}CgBiBaBaAg@_Au@a@MgAk@m@u@q@{AcAwCqBeFeAaDu@kBgAgCWWmAI}BCUEqB}@gFgBsD}AkEcBgBw@oJuDaDwAc@MgAeAqC}Ck@e@mGcCwCqAmCsAeA_@}MsFcDcBkB{@aA_@yBm@iOqGyMcFoIgD}LiFaD_BaHkCoGuCeGaCo@Ks@?{Wz@aFHs@Go@YoOsOsOgOUYM_@Gu@GiB]{MGuDBgAJiB`@mFBu@Ay@I}@e@iB_@oC?o@`@mB@UK}@u@oDCc@Fc@bAsCd@w@p@{@HUBe@Cc@UsB?i@CGE?CHBr@PtBAd@Of@w@lAc@|@w@xBIh@Bf@n@rCHv@?^Ir@Q~@AXBj@RjBj@bCFn@D|@GxAQnBCv@SpCClA`@fRLdDFp@LZLL|AzAn@h@rAvA`KxJdMlMb@ZXJz@BfIQlUs@|@HbExAfJdErG`CpDhBtJdErNxFrK`ErMtFhEvA~BdAdCrAtNxFvAh@`GnCvCfAnBz@BHA`@a@hDKzAm@bEOxAa@xG[xAg@`BcBlHeCpIuAnD}@lCcBdEsArFyAfEmHtQo@rA{DrGc@jAKp@@ZLt@Tt@Xr@\\p@pB~CfBzC~I|Sr@|AdApAFLBPELKHM?eCo@_Ew@aCs@aIeDiBiAOAMDGJENBLTR~BlAxJfGLN@LG^BNpDnBFJ@LE\\YrAGf@w@bDALELATJTlBz@pCt@~ClA~DjBzAt@dEhBfCnArIzDrBdA~@^HBDLRL"
+    "summaryPolyline": "cv_sCmr{~Uk@f@~CxACrA`MbGhI~HtCcCfCz@b@y@fH`Ct@u@zELRY_H{TYeCX_Bp@s@dGmB`CiEsA}ED}Af@uADwGkA{DN}DoAcBn@}@p@yESeDrEuEf@qDu@q@cOuBSi@J_AxCqBTo@Ik@sJmDgFwIyDeCmC}Ip@aBxFMvKaCd@g@I_AkQyLcJkVcBaDiFWmg@cSkB}@qGmGui@qUcn@eVsk@iV_BSm^fAeCe@}`@ka@y@qXr@wOmAeH`@aEeAoGdAuDfBmCEkGvEAnCyAbC`B|FKfG~Eld@pKf[cAEoXy@_Lb@wC`ImRnIkPz@k@bC~AnDmC|ALhCkBZaHKmDbDyFLiAoBeN{HaVlGiD~FoKfF`CtFzEdH`K|B}@z^|ZdIrCpInIpu@xl@lE|E~BbF~FfHtLdQpEfKsDbFkAtEAnh@_@zFmRz|@eY`z@q@vDSpIi@bAy@V_KaDm\\yM_Bs@cGgGmi@oUem@wUwm@kWuAO__@fAqBa@aa@ga@{@aYt@cOoAeIb@sDeAoGbAkDjB}CMyFj@WpDLjCwA~B`BlGG`GzE|c@nKv[aAEqV{@{MZmCfJsTtFkLlA{An@SrB`BxDqCxAH~BqAf@qHKqDnDsGsBqPsHoUdGyC~FwKlF`CxH`H~E|H`CaAh^nZrI`DvItIpv@vm@dDtDbCfFlStX|BxD|B~FwDnFiA|E?~g@e@jGoR||@cYbz@k@pDMtHaAbBuBGqh@uSiGoGo{Acn@wi@kUsASya@|@ka@u`@e@aAq@qWt@{OoAqH`@wEeAyFjA{DbBeCSgFRo@jEFnC{AbCdB`GKlG~Edd@nKj[gAEuWy@{L`@sC`ImRvHoOnAgA`CdBxDsC|ALdCmB\\cHM}C`D}FPeAuBaOyHqUjGcD`GsKtErBxGvFnGpJ`C}@f^nZ|IbDfHlHzv@|m@lE~EtBtEbI`KjOrUqEqI_RyVyCaGiD{Dsx@oo@aGgG}HgCw_@k[uB~@_HaKkF{E_GaCcGpKmGdDl@vCdGhQvB~NoDlHQfMgChBuAOoDnCuBwAgA\\oAbB}EdKwJlU[nCx@vMHhVa[bA{c@iKoG_FkGFeCaBsCnAkEGa@fARrE{BdEq@nC~@tF[nElAzHu@hNp@hYn@jAba@p`@jd@i@dfCndAkCzY{CtMiC|I{FlOuBdIuJfVqExH}@nCdAnEzFvJ~M~Yi@NcLoCgM}Fo@`@tOpJXzAhDlBcBbJLt@zJlDrd@rT"
 }
